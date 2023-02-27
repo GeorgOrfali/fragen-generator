@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden,\ndie zusätzliche Operationen auf Listen realisieren: binäre Suche,\nSortieren, Bestimmung von Minimum und Maximum, usw."
+    },
+    {
+      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte,\ndann muss man sie importieren:\n"
+    },
+    {
+      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente\nder Liste das Comparable-Interface implementieren."
+    },
+    {
+      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object."
+    },
+    {
+      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der\nListe mitteilen und gleichzeitig die Implementierung der Liste nicht auf\nElemente bestimmter Typen beschränken, damit wir sie immer\nwiederverwenden können."
+    },
+    {
+      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits\nwiederverwendbare und andererseits typensichere Datenstrukturen zu\nkonstruieren: Generics."
+    },
+    {
+      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T."
+    },
+    {
+      "sentence": "Anmerkung: Primitive Datentypen können hier nicht verwendet\nwerden, ausschließlich Referenztypen. Folgende Anweisung ist also\nungültig und führt zu einem Kompilierfehler:"
+    },
+    {
+      "sentence": "Generics sind ein wesentlicher Bestandteil der Java\nKlassenbibliothek, viele der vordefinierten Klassen und Interfaces\nmachen davon starken Gebrauch."
+    },
+    {
+      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator,\ndie wir beim Sortieren von Objekten kennengelernt haben:"
+    },
+    {
+      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen."
+    },
+    {
+      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können\ndie Instanzen dieser Klassen in einer foreach-Schleife verwendet werden\nund wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt\nwerden kann."
+    },
+    {
+      "sentence": "Das Queue-Interface und das Deque-Interface definieren\nEigenschaften einer Queue (s. später), die als Sonderfall einer\nverketteten Liste betrachtet werden kann."
+    },
+    {
+      "sentence": "Die Klassen AbstractList und AbstractSequentialList\nimplementieren v.a. solche Methoden, die einen Spezialfall einer\nanderen Methode darstellen."
+    },
+    {
+      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe\nvon einem Band und haben endlich viele Zustände."
+    },
+    {
+      "sentence": "Neben deterministischen Turingmaschinen gibt es auch\nnichtdeterministische Turingmaschinen."
+    },
+    {
+      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein\nWort"
+    },
+    {
+      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei\nTuringmaschinen den Begriff einer Konfiguration, d.h., einer\nMomentaufnahme einer Turingmaschinen-Berechnung"
+    },
+    {
+      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die\nTuring-Maschine in einen Endzustand gelangen kann. Dabei startet\ndie Turing-Maschine im Anfangszustand z0, der Kopf befindet sich\nauf dem ersten Zeichen des Eingabe-Wortes."
+    },
+    {
+      "sentence": "Wenn eine Maschine M f ür ein Eingabewort w in einen\nEndzustand gelangt, dann sagt man auch, dass M auf w hält."
+    }
+  ]
+}
