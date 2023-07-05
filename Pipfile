@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow = "*"
+lexrank = "*"
+pdfminer-six = "*"
+flask = "*"
+flask-mysql = "*"
+flask-cors = "*"
+nltk = "*"
+path = "*"
+numpy = "*"
+wn = "*"
+einops = "*"
+matplotlib = "*"
+tensorflow-text = "*"
+
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
+python_full_version = "3.7.15"

@@ -1,64 +1,99 @@
 {
   "data": [
     {
-      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden,\ndie zusätzliche Operationen auf Listen realisieren: binäre Suche,\nSortieren, Bestimmung von Minimum und Maximum, usw."
+      "answer": "java.util.Collections",
+      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw.",
+      "question": "Welche Klasse enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw. ?"
     },
     {
-      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte,\ndann muss man sie importieren:\n"
+      "answer": "Klassen",
+      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte, dann muss man sie importieren: ",
+      "question": "Was muss man importieren von den Paket java.util, wenn man es verwenden möchte ?"
     },
     {
-      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente\nder Liste das Comparable-Interface implementieren."
+      "answer": "Elemente",
+      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente der Liste das Comparable-Interface implementieren.",
+      "question": "Was setzen die meisten Operationen allerdings voraus, dass von der Liste das Comparable-Interface implementiert wird ?"
     },
     {
-      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object."
+      "answer": "Object",
+      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object.",
+      "question": "Wo von erbt jede Klasse ?"
     },
     {
-      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der\nListe mitteilen und gleichzeitig die Implementierung der Liste nicht auf\nElemente bestimmter Typen beschränken, damit wir sie immer\nwiederverwenden können."
+      "answer": "Compiler",
+      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können.",
+      "question": "Wem wollen wir den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können ?"
     },
     {
-      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits\nwiederverwendbare und andererseits typensichere Datenstrukturen zu\nkonstruieren: Generics."
+      "answer": "Java",
+      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren: Generics.",
+      "question": "Wer bietet seit Version 5 eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren namens Generics ?"
     },
     {
-      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T."
+      "answer": "Typparameter",
+      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T.",
+      "question": "Welche Konvention wird als einfache Großbuchstaben T angegeben ?"
     },
     {
-      "sentence": "Anmerkung: Primitive Datentypen können hier nicht verwendet\nwerden, ausschließlich Referenztypen. Folgende Anweisung ist also\nungültig und führt zu einem Kompilierfehler:"
+      "answer": "Generics",
+      "sentence": "Generics sind ein wesentlicher Bestandteil der Java Klassenbibliothek, viele der vordefinierten Klassen und Interfaces machen davon starken Gebrauch.",
+      "question": "Welche sind ein wesentlicher Bestandteil der Java Klassenbibliothek ?"
     },
     {
-      "sentence": "Generics sind ein wesentlicher Bestandteil der Java\nKlassenbibliothek, viele der vordefinierten Klassen und Interfaces\nmachen davon starken Gebrauch."
+      "answer": "Sortieren",
+      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator, die wir beim Sortieren von Objekten kennengelernt haben:",
+      "question": "Wo haben wir die Interfaces Comparable und Comparator kennengelernt ?"
     },
     {
-      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator,\ndie wir beim Sortieren von Objekten kennengelernt haben:"
+      "answer": "Datenstrukturen",
+      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen.",
+      "question": "Was befindet sich im Paket java.util ?"
     },
     {
-      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen."
+      "answer": "Instanzen",
+      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können die Instanzen dieser Klassen in einer foreach-Schleife verwendet werden und wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt werden kann.",
+      "question": "Was kann in einer foreach-Schleife verwendet werden, wenn eine Klasse das Iterable-Interface implementiert ?"
     },
     {
-      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können\ndie Instanzen dieser Klassen in einer foreach-Schleife verwendet werden\nund wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt\nwerden kann."
+      "answer": "Eigenschaften",
+      "sentence": "Das Queue-Interface und das Deque-Interface definieren Eigenschaften einer Queue (s. später), die als Sonderfall einer verketteten Liste betrachtet werden kann.",
+      "question": "Was definieren das Queue-Interface und das Deque-Interface in einer Queue ?"
     },
     {
-      "sentence": "Das Queue-Interface und das Deque-Interface definieren\nEigenschaften einer Queue (s. später), die als Sonderfall einer\nverketteten Liste betrachtet werden kann."
+      "answer": "Spezialfall",
+      "sentence": "Die Klassen AbstractList und AbstractSequentialList implementieren v.a. solche Methoden, die einen Spezialfall einer anderen Methode darstellen.",
+      "question": "Welche Art von Methoden implementieren die Klassen AbstractList und AbstractSequentialList ?"
     },
     {
-      "sentence": "Die Klassen AbstractList und AbstractSequentialList\nimplementieren v.a. solche Methoden, die einen Spezialfall einer\nanderen Methode darstellen."
+      "answer": "Zustände",
+      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe von einem Band und haben endlich viele Zustände.",
+      "question": "Was haben endliche Automaten ?"
     },
     {
-      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe\nvon einem Band und haben endlich viele Zustände."
+      "answer": "Turingmaschinen",
+      "sentence": "Neben deterministischen Turingmaschinen gibt es auch nichtdeterministische Turingmaschinen.",
+      "question": "Was gibt es neben deterministisch auch in nichtdeterministisch ?"
     },
     {
-      "sentence": "Neben deterministischen Turingmaschinen gibt es auch\nnichtdeterministische Turingmaschinen."
+      "answer": "Wort",
+      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein Wort",
+      "question": "Durch was ist eine Konfiguration in einer Turingmaschine gegeben ?"
     },
     {
-      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein\nWort"
+      "answer": "Maschinenmodellen",
+      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei Turingmaschinen den Begriff einer Konfiguration, d.h., einer Momentaufnahme einer Turingmaschinen-Berechnung",
+      "question": "Turingmaschinen enthalten den Begriff der Konfiguration sowie auch andere ... ?"
     },
     {
-      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei\nTuringmaschinen den Begriff einer Konfiguration, d.h., einer\nMomentaufnahme einer Turingmaschinen-Berechnung"
+      "answer": "Eingabe-Wörter",
+      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die Turing-Maschine in einen Endzustand gelangen kann. Dabei startet die Turing-Maschine im Anfangszustand z0, der Kopf befindet sich auf dem ersten Zeichen des Eingabe-Wortes.",
+      "question": "Was muss in einer Turing-Maschine in einen Endzustand gelangen damit dies als Akzeptierte Sprache gilt ?"
     },
     {
-      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die\nTuring-Maschine in einen Endzustand gelangen kann. Dabei startet\ndie Turing-Maschine im Anfangszustand z0, der Kopf befindet sich\nauf dem ersten Zeichen des Eingabe-Wortes."
-    },
-    {
-      "sentence": "Wenn eine Maschine M f ür ein Eingabewort w in einen\nEndzustand gelangt, dann sagt man auch, dass M auf w hält."
+      "answer": "Endzustand",
+      "sentence": "Wenn eine Maschine M für ein Eingabewort w in einen Endzustand gelangt, dann sagt man auch, dass M auf w hält.",
+      "question": "Wie nennt man auch, wenn eine Maschine M auf w hält ?"
     }
   ]
 }

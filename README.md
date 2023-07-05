@@ -6,7 +6,7 @@ Die Software nutzt Python version: 3.7.15
 
 ## Dependencies herunterladen
 `
-pipenv install
+make setup
 `
 
 ### Falls pipenv nicht vorhanden
@@ -16,10 +16,20 @@ pip install pipenv
 ## Software starten
 ### zuerst Pipenv shell starten
 `
-pipenv shell
+make shell
 `
 
 ### Flask server starten
 `
-flask --app src/routes.py --debug run
+make run
+`
+
+### Projekt Testen
+Dazu gehe auf den Link um Wahr-Falsch und LückenText Aufgaben zu testen:
+`
+http://127.0.0.1:5000/
+`
+Um Zusätzlich Single Choice mittels RNN zu generieren und alle anderen Wahr-Falsch und LückenText Aufgaben zu generieren:
+`
+http://127.0.0.1:5000/all
 `

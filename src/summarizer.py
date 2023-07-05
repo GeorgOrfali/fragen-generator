@@ -11,13 +11,23 @@ import json
 def read_text_from_page(page):
     rawText = ''
     count = 0
+    testArray = []
+    Sentence = ''
     for element in page:
         if isinstance(element, LTTextContainer) and count > 0:
             textContent = element.get_text()
-            rawText = rawText + textContent
+            if ':' not in textContent:
+                rawText = rawText + textContent
+                if '.' not in textContent and '!' not in textContent and '?' not in textContent:
+                    Sentence = Sentence + textContent
+                else:
+                    if len(Sentence.split()) > 3:
+                        testArray.append(Sentence)
+                        Sentence = ''
+
         count = count + 1
     resultArray = tokenize.sent_tokenize(rawText)
-    return {'array': resultArray, 'raw': rawText}
+    return {'array': testArray, 'raw': rawText}
 
 
 class Summarizer:
@@ -49,10 +59,11 @@ class Summarizer:
             )
             if len(summary) > 0:
                 index = summary.argmax(axis=0)
+                sentence = pageText['array'][index]
                 self.sentences.append({
-                    'sentence': pageText['array'][index],
-                    'abstract': pageText['raw'],
-                    'page': (i + 1)
+                        'sentence': sentence,
+                        'abstract': pageText['raw'],
+                        'page': (i + 1)
                 })
 
     def get_sentences(self):
