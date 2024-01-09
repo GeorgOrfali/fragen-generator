@@ -1,16 +1,42 @@
 from abc import ABC
-
 from path import Path
 import numpy as np
-import typing
-from typing import Any, Tuple
 import einops
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import tensorflow as tf
 import tensorflow_text as tf_text
 import json
-import re
+
+
+class SingleChoice:
+    def decode(self, decoded, texts):
+        result = []
+        for i, s in enumerate(decoded):
+            sentence = s.numpy().decode()
+            input = texts[i].split("<A>")
+            if sentence.count("[UNK]") == 1:
+                if len(input) > 1:
+                    replaceText = input[0] + input[1]
+                else:
+                    replaceText = texts[i]
+                sentence.replace("[UNK]", replaceText)
+                result.append(sentence)
+            elif sentence.count("[UNK]") > 1:
+                testSentence = sentence.split("[UNK]")
+                if len(input) > 1:
+                    newConstructed = testSentence[0] + input[0] + testSentence[1] + input[1]
+                    for i in range(2, len(testSentence)):
+                        newConstructed = newConstructed + testSentence[i]
+                else:
+                    newConstructed = testSentence[0] + texts[i]
+                    for i in range(1, len(testSentence)):
+                        newConstructed = newConstructed + testSentence[i]
+
+                result.append(newConstructed)
+            else:
+                result.append(sentence)
+        return result
 
 
 class SingleChoiceGenerator(tf.keras.Model):
@@ -44,6 +70,36 @@ class SingleChoiceGenerator(tf.keras.Model):
 
 
 @SingleChoiceGenerator.add_method
+def decode(self, decoded, texts):
+    result = []
+    for i, s in enumerate(decoded):
+        sentence = s.numpy().decode()
+        input = texts[i].split("<A>")
+        if sentence.count("[UNK]") == 1:
+            if len(input) > 1:
+                replaceText = input[0] + input[1]
+            else:
+                replaceText = texts[i]
+            sentence.replace("[UNK]", replaceText)
+            result.append(sentence)
+        elif sentence.count("[UNK]") > 1:
+            testSentence = sentence.split("[UNK]")
+            if len(input) > 1:
+                newConstructed = testSentence[0] + input[0] + testSentence[1] + input[1]
+                for i in range(2, len(testSentence)):
+                    newConstructed = newConstructed + testSentence[i]
+            else:
+                newConstructed = testSentence[0] + texts[i]
+                for i in range(1, len(testSentence)):
+                    newConstructed = newConstructed + testSentence[i]
+
+            result.append(newConstructed)
+        else:
+            result.append(sentence)
+    return result
+
+
+@SingleChoiceGenerator.add_method
 def generate(self,
              texts, *,
              max_length=50,
@@ -73,11 +129,10 @@ def generate(self,
     tokens = tf.concat(tokens, axis=-1)  # t*[(batch 1)] -> (batch, t)
     self.last_attention_weights = tf.concat(attention_weights, axis=1)  # t*[(batch 1 s)] -> (batch, t s)
 
-    result = self.decoder.tokens_to_text(tokens)
-    return result
+    decoded = self.decoder.tokens_to_text(tokens)
+    return decoded
 
 
-# @title
 @SingleChoiceGenerator.add_method
 def plot_attention(self, text, **kwargs):
     assert isinstance(text, str)
@@ -158,7 +213,7 @@ class Export(tf.Module, ABC):
 
 
 class TrainModel:
-    path = Path('datenset/test.json')
+    path = Path('datenset/data.json')
     train_data = []
     UNITS = 256
 
@@ -166,9 +221,9 @@ class TrainModel:
         self.target_text_processor = None
         self.context_text_processor = None
 
-    def load_GermanQuAD(self):
+    def load_GermanQuAD(self, file):
         self.path = None
-        p = Path('datenset/GermanQuAD_train.json')
+        p = Path(file)
         with p.open(mode='rt', encoding='utf-8') as f:
             data_temp = json.load(f)
 
@@ -185,7 +240,31 @@ class TrainModel:
                 input.append(inputSentence)
                 output.append(question)
 
+        return {"input": input, "output": output}
+
+    def load_GermanQuAD_case_2(self, file):
+        self.path = None
+        p = Path(file)
+        with p.open(mode='rt', encoding='utf-8') as f:
+            data_temp = json.load(f)
+
+        input = []
+        output = []
+
+        for paragraph in data_temp['data']:
+            # print(paragraph['paragraphs'][0]['context'])
+            sentence = paragraph['paragraphs'][0]['context']
+            for qas in paragraph['paragraphs'][0]['qas']:
+                answer = qas['answers'][0]['text']
+                question = qas['question'].split(' ')[0]
+                inputSentence = sentence.replace(answer, "<A>") + " <A> " + answer
+                input.append(inputSentence)
+                output.append(question)
+
+        return {"input": input, "output": output}
+
     def load_TestJson(self):
+        self.path = Path('datenset/data.json')
         with self.path.open(mode='rt', encoding='utf-8') as f:
             data_temp = json.load(f)
 
@@ -199,61 +278,20 @@ class TrainModel:
             input.append(sentence)
             output.append(question)
 
+        return {"input": input, "output": output}
+
     def prepare_training_data(self):
-        #p = Path('datenset/GermanQuAD_train.json')
-        #with p.open(mode='rt', encoding='utf-8') as f:
-        #    data_temp = json.load(f)
 
-        input = []
-        output = []
-
-        #for paragraph in data_temp['data']:
-        #    # print(paragraph['paragraphs'][0]['context'])
-        #    sentence = paragraph['paragraphs'][0]['context']
-        #    if '===' in sentence:
-        #        sentence = sentence.split('===')
-        #        sentence = sentence[2]
-        #    elif '==' in sentence:
-        #        sentence = sentence.split('==')
-        #        sentence = sentence[2]
-        #
-        #    for qas in paragraph['paragraphs'][0]['qas']:
-        #        answer = qas['answers'][0]['text']
-        #        # answer_start = qas['answers'][0]['answer_start']
-        #        question = qas['question']
-        #        answerIndex = sentence.find(answer)
-        #        start = answerIndex
-        #        end = answerIndex
-        #        # find Start
-        #        if answerIndex > len(answer):
-        #            while sentence[start] != '.':
-        #                start = start - 1
-        #        start = start + 2
-        #        # find End
-        #        if answerIndex < len(sentence) - 1:
-        #            while sentence[end] != '.':
-        #                if end < len(sentence) - 1:
-        #                    end = end + 1
-        #                else:
-        #                    break
-        #        inputSentence = sentence[start:end].replace(answer, "<A>") + " <A> " + answer
-        #        input.append(inputSentence)
-        #        output.append(question)
-
-        with self.path.open(mode='rt', encoding='utf-8') as f:
-            data_temp1 = json.load(f)
-
-        for i in range(7):
-            answer1 = data_temp1['data'][i]["answer"]
-            sentence1 = data_temp1['data'][i]["sentence"].replace(answer1, "<A>") + " <A> " + answer1
-            question1 = data_temp1['data'][i]["question"]
-            input.append(sentence1)
-            output.append(question1)
+        germanQuAD1 = self.load_GermanQuAD_case_2("datenset/GermanQuAD_train.json")
+        germanQuAD2 = self.load_GermanQuAD_case_2("datenset/GermanQuAD_test.json")
+        #test = self.load_TestJson()
+        input = germanQuAD1["input"] + germanQuAD2["input"]
+        output = germanQuAD1["output"] + germanQuAD2["output"]
 
         input = np.array([i for i in input])
         output = np.array([o for o in output])
         BUFFER_SIZE = len(output)
-        BATCH_SIZE = 4
+        BATCH_SIZE = 64
         print(BUFFER_SIZE)
         print(input)
         print(output)
@@ -303,27 +341,30 @@ class TrainModel:
         print(model.evaluate(val_ds, steps=20, return_dict=True))
         history = model.fit(
             train_ds.repeat(),
-            epochs=10,
-            steps_per_epoch=10,
+            epochs=20,
+            steps_per_epoch=20,
             validation_data=val_ds,
-            validation_steps=20,
+            validation_steps=5,
             callbacks=[
                 tf.keras.callbacks.EarlyStopping(patience=3)])
+
+        #Quick Test
         inputs = [
             'Konvention ist, <A> als einfache Großbuchstaben anzugeben, hier T. <A> Typparameter',
             'Im Paket <A> befinden sich u. a. dynamische Datenstrukturen. <A> java.util',
             'Wie endliche Automaten lesen <A> eine Eingabe von einem Band und haben endlich viele Zustände. <A> Turing-Maschinen',
             'Java eine komfortable Möglichkeit'
         ]
-        result = model.generate(inputs)  # Are you still home
+
+        result = model.generate(inputs)
         print("Result: ", result)
-        print("Encoded Result: ", result[0].numpy().decode())
         export = Export(model)
         result = export.generate(tf.constant(inputs))
-        #print("Result: ", result)
+        # print("Result: ", result)
         tf.saved_model.save(export, 'generator',
                             signatures={'serving_default': export.generate})
         print("Model Saved!")
+
     def process_text(self, context, target):
         context = self.context_text_processor(context).to_tensor()
         target = self.target_text_processor(target)

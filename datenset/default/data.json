@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "answer": "java.util.Collections",
+      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw.",
+      "question": "Welche Klasse enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw. ?"
+    },
+    {
+      "answer": "Klassen",
+      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte, dann muss man sie importieren",
+      "question": "Was muss man importieren von den Paket java.util, wenn man es verwenden möchte ?"
+    },
+    {
+      "answer": "Elemente",
+      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente der Liste das Comparable-Interface implementieren.",
+      "question": "Was setzen die meisten Operationen allerdings voraus, dass von der Liste das Comparable-Interface implementiert wird ?"
+    },
+    {
+      "answer": "Object",
+      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object.",
+      "question": "Wo von erbt jede Klasse ?"
+    },
+    {
+      "answer": "Compiler",
+      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können.",
+      "question": "Wem wollen wir den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können ?"
+    },
+    {
+      "answer": "Java",
+      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren: Generics.",
+      "question": "Wer bietet seit Version 5 eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren namens Generics ?"
+    },
+    {
+      "answer": "Typparameter",
+      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T.",
+      "question": "Welche Konvention wird als einfache Großbuchstaben T angegeben ?"
+    },
+    {
+      "answer": "Generics",
+      "sentence": "Generics sind ein wesentlicher Bestandteil der Java Klassenbibliothek, viele der vordefinierten Klassen und Interfaces machen davon starken Gebrauch.",
+      "question": "Welche sind ein wesentlicher Bestandteil der Java Klassenbibliothek ?"
+    },
+    {
+      "answer": "Sortieren",
+      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator, die wir beim Sortieren von Objekten kennengelernt haben:",
+      "question": "Wo haben wir die Interfaces Comparable und Comparator kennengelernt ?"
+    },
+    {
+      "answer": "Datenstrukturen",
+      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen.",
+      "question": "Was befindet sich im Paket java.util ?"
+    },
+    {
+      "answer": "Instanzen",
+      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können die Instanzen dieser Klassen in einer foreach-Schleife verwendet werden und wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt werden kann.",
+      "question": "Was kann in einer foreach-Schleife verwendet werden, wenn eine Klasse das Iterable-Interface implementiert ?"
+    },
+    {
+      "answer": "Eigenschaften",
+      "sentence": "Das Queue-Interface und das Deque-Interface definieren Eigenschaften einer Queue (s. später), die als Sonderfall einer verketteten Liste betrachtet werden kann.",
+      "question": "Was definieren das Queue-Interface und das Deque-Interface in einer Queue ?"
+    },
+    {
+      "answer": "Spezialfall",
+      "sentence": "Die Klassen AbstractList und AbstractSequentialList implementieren v.a. solche Methoden, die einen Spezialfall einer anderen Methode darstellen.",
+      "question": "Welche Art von Methoden implementieren die Klassen AbstractList und AbstractSequentialList ?"
+    },
+    {
+      "answer": "Zustände",
+      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe von einem Band und haben endlich viele Zustände.",
+      "question": "Was haben endliche Automaten ?"
+    },
+    {
+      "answer": "Turingmaschinen",
+      "sentence": "Neben deterministischen Turingmaschinen gibt es auch nichtdeterministische Turingmaschinen.",
+      "question": "Was gibt es neben deterministisch auch in nichtdeterministisch ?"
+    },
+    {
+      "answer": "Wort",
+      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein Wort",
+      "question": "Durch was ist eine Konfiguration in einer Turingmaschine gegeben ?"
+    },
+    {
+      "answer": "Maschinenmodellen",
+      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei Turingmaschinen den Begriff einer Konfiguration, d.h., einer Momentaufnahme einer Turingmaschinen-Berechnung",
+      "question": "Turingmaschinen enthalten den Begriff der Konfiguration sowie auch andere ... ?"
+    },
+    {
+      "answer": "Eingabe-Wörter",
+      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die Turing-Maschine in einen Endzustand gelangen kann. Dabei startet die Turing-Maschine im Anfangszustand z0, der Kopf befindet sich auf dem ersten Zeichen des Eingabe-Wortes.",
+      "question": "Was muss in einer Turing-Maschine in einen Endzustand gelangen damit dies als Akzeptierte Sprache gilt ?"
+    },
+    {
+      "answer": "Endzustand",
+      "sentence": "Wenn eine Maschine M für ein Eingabewort w in einen Endzustand gelangt, dann sagt man auch, dass M auf w hält.",
+      "question": "Wie nennt man auch, wenn eine Maschine M auf w hält ?"
+    }
+  ]
+}

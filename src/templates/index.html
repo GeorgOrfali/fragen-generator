@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q-Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/progress.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .btn-download {
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* Darker background on mouse-over */
+        .btn-download:hover {
+            background-color: RoyalBlue;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2 id="heading">Aufgaben Generieren</h2>
+                <p>Führen Sie die angegebenen Schritte aus!</p>
+
+                <form id="msform">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="pdf"><strong>PDF</strong></li>
+                        <li id="generieren"><strong>Generierung</strong></li>
+                        <li id="auswahl"><strong>Auswahl</strong></li>
+                        <li id="download"><strong>Download</strong></li>
+                    </ul>
+                    <br>
+                    <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Daten zur Generierung:</h2>
+                                </div>
+                            </div>
+
+                            <label class="fieldlabels">Aufgaben Arten</label>
+                            <select id="aufgabenart" class="form-select">
+                                <option selected disabled>Wählen Sie die Art der Aufgaben</option>
+                                <option value="w">Wahr-Falsch</option>
+                                <option value="l">Lückentext</option>
+                                <option value="s">Single Choice</option>
+                                <option value="g">Gemischt</option>
+                            </select>
+                            <!--<label class="fieldlabels">Anzahl der maximalen Anzahl generierten Fragen</label>
+                            <input type="number" class="form-control" min="1" placeholder="2" /> -->
+                            <label for="formFileLg" class="form-label">Vorlesungsdatei als PDF hochladen:</label>
+                            <input class="form-control" id="formFileLg" type="file">
+
+                        </div>
+                        <input id="FirstNext" type="button" name="next" class="next action-button" value="Weiter" onclick="sendFile()"/>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Aufgaben werden Generiert...</h2>
+                                </div>
+                            </div>
+                            <label class="fieldlabels" id="status_progress_text">PDF wird ausgelesen...</label>
+                            <br/>
+                            <div class="spinner-border text-primary" role="status">
+                            </div>
+
+                        </div>
+                        <input type="button" name="next" id="NextAufgaben" class="next action-button" style="display: none;" value="Weiter"/>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Vorher"/>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+
+                                <div class="col-7">
+                                    <h2 class="fs-title">Aufgaben auswählen</h2>
+                                </div>
+                                <h2 id="Aufgaben"></h2>
+
+                                <!--<div class="list-group">
+                                    <label class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        <div style="margin-left: 2%;">
+                                            <h2 class="fw-bold">Art: Wahr-Falsch Aufgabe</h2>
+                                            <h4>Aussage: Java besitzt Pointer Referenzen.</h4>
+                                            <h4>Antwortmöglichkeit1: Wahr</h4>
+                                            <h4>Antwortmöglichkeit2: Falsch</h4>
+                                            <h4>Richtige Antwort: Falsch</h4>
+                                        </div>
+                                    </label>
+                                    <label class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        <div style="margin-left: 2%;">
+                                            <h2 class="fw-bold">Art: Wahr-Falsch Aufgabe</h2>
+                                            <h4>Aussage: Die Migrationstransparenz ist abhängig von der Skalierbarkeitstransparenz.</h4>
+                                            <h4>Antwortmöglichkeit1: Wahr</h4>
+                                            <h4>Antwortmöglichkeit2: Falsch</h4>
+                                            <h4>Richtige Antwort: Richtig</h4>
+                                        </div>
+                                    </label>
+                                    <label class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        <div style="margin-left: 2%;">
+                                            <h2 class="fw-bold">Art: Lückentext</h2>
+                                            <h4>Text: Cloud computing is a model for enabling ubiquitous, convenient, X1 to a shared pool of configurable X2</h4>
+                                            <h4>X1: on-demand network access</h4>
+                                            <h4>X2: computing resources</h4>
+                                        </div>
+                                    </label>
+                                </div>-->
+                            </div>
+                        </div>
+                        <input type="button" name="next" class="next action-button" value="Download XML" onclick="exportieren();"/>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Vorher"/>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                                <h4 class="fs-title">Die XML zum Exportieren für Jack wurde erfolgreich erstellt!</h4>
+                            <!--<div class="row justify-content-center">
+                                <a class="btn-download text-center" href="aufgaben.xml" download="aufgaben"><i class="fa fa-download"></i>Download</a>
+                            </div>-->
+                        </div>
+                        <br/>
+                        <input type="button" name="neustart" class="neustart action-button" value="Neustarten"/>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Vorher"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/progress.js') }}"></script>
+<script>
+    var Aufgaben;
+    function sendFile() {
+        // Assuming you have a file input element with id "fileInput"
+        var fileInput = document.getElementById('formFileLg');
+        var file = fileInput.files[0];
+
+        var aufgabenart = document.getElementById('aufgabenart');
+
+        var formData = new FormData();
+        formData.append('file', file);
+        formData.append('aufgabenart',aufgabenart.value);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/upload', true);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                // File uploaded successfully
+                Aufgaben = xhr.responseText;
+                document.getElementById('NextAufgaben').click();
+                parseJsonArray(Aufgaben, 'Aufgaben')
+            } else {
+                // Error handling
+                console.error('Error:', xhr.status);
+            }
+        };
+
+        xhr.send(formData);
+    }
+
+    var selectedTasks = [];
+    function exportieren(){
+        var formData = new FormData();
+        formData.append('aufgaben', JSON.stringify(selectedTasks));
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/xml', true);
+        xhr.responseType = 'blob';
+        xhr.onload = function (e) {
+            var blob = e.currentTarget.response;
+            saveBlob(blob, 'aufgabe.xml');
+        }
+
+        xhr.send(formData);
+    }
+
+    function saveBlob(blob, fileName) {
+        var a = document.createElement('a');
+        a.href = window.URL.createObjectURL(blob);
+        a.download = fileName;
+        a.dispatchEvent(new MouseEvent('click'));
+    }
+
+    function parseJsonArray(array, container2){
+        var dataArray = JSON.parse(array);
+        var container = document.getElementById(container2);
+        var dataCounter = 0;
+// Loop through the JSON array
+        dataArray.forEach(function(data) {
+            // Create a container for each object
+            var objectContainer = document.createElement('div');
+            objectContainer.setAttribute('class','list-group');
+            var label = document.createElement('label');
+            label.setAttribute('class','list-group-item');
+
+            var checkbox = document.createElement('input');
+            checkbox.setAttribute('type','checkbox');
+            checkbox.setAttribute('id','c'+dataCounter);
+            checkbox.setAttribute('value', dataCounter);
+            (function (e) {
+                e.addEventListener('change', function () {
+                    if(e.checked){
+                     var values = {};
+                     values['question'] = document.getElementById('q'+e.value).value;
+                     values['type'] = document.getElementById('t'+e.value).textContent;
+                     values['answer'] = document.getElementById('a'+e.value).textContent;
+                     if(document.getElementById('d'+e.value) != null) {
+                         values['distractors'] = document.getElementById('d'+e.value).value;
+                     }
+                     selectedTasks[e.value] = values;
+                    }else{
+                        selectedTasks[e.value] = [];
+                    }
+                });
+            })(checkbox);
+            //checkbox.setAttribute('class', 'form-check-input me-1');
+            label.appendChild(checkbox);
+            var marginContainer = document.createElement('div');
+            marginContainer.setAttribute('style','margin-left: 2%;');
+            // Create HTML elements to display the JSON object properties
+            for (var key in data) {
+                if (key !== 'sentence') {
+                    var keyLabel = document.createElement('strong');
+                    keyLabel.setAttribute('style', 'font-size: 24px;');
+                    keyLabel.textContent = key + ': ';
+                    var value = null;
+                    var valueQ = null;
+                    if (key === 'question') {
+                        valueQ = document.createElement('textarea');
+                        valueQ.setAttribute('style', 'width: 100%; font-size: 24px;');
+                        valueQ.setAttribute('id', 'q'+dataCounter);
+                        valueQ.value = data[key];
+                        (function (e) {
+                            e.addEventListener('change', function () {
+                                index = e.getAttribute('id').split('q')[1];
+                                checkboxcheck = document.getElementById('c'+index);
+                                if (checkboxcheck.checked){
+                                    selectedTasks[index]['question'] = e.value;
+                                }
+                            });
+                        })(valueQ);
+                    } else if (key === 'distractors') {
+                        value = document.createElement('textarea');
+                        value.setAttribute('style', 'width: 100%; font-size: 24px;');
+                        value.setAttribute('id', 'd'+dataCounter);
+                        value.value = data[key];
+                        (function (e) {
+                            e.addEventListener('change', function () {
+                                index = e.getAttribute('id').split('d')[1];
+                                checkboxcheck = document.getElementById('c'+index);
+                                if (checkboxcheck.checked){
+                                    selectedTasks[index]['question'] = e.value;
+                                }
+                            });
+                        })(value);
+                    } else if(key === 'type'){
+                        value = document.createElement('span');
+                        value.setAttribute('style', 'font-size: 24px;');
+                        value.setAttribute('id', 't'+dataCounter);
+                        value.textContent = data[key];
+                    }else if(key === 'answer'){
+                        value = document.createElement('span');
+                        value.setAttribute('style', 'font-size: 24px;');
+                        value.setAttribute('id', 'a'+dataCounter);
+                        value.textContent = data[key];
+                    }else{
+                        value = document.createElement('span');
+                        value.setAttribute('style', 'font-size: 24px;');
+                        value.textContent = data[key];
+                    }
+                    var lineBreak = document.createElement('br');
+                    marginContainer.appendChild(keyLabel);
+                    if (value != null) {
+                        marginContainer.appendChild(value);
+                    }else{
+                        marginContainer.appendChild(valueQ);
+                    }
+                    marginContainer.appendChild(lineBreak);
+                } else {
+                    hiddenSentence = document.createElement('p');
+                }
+            }
+            label.appendChild(marginContainer);
+            objectContainer.appendChild(label);
+            // Add a separator between objects
+            var separator = document.createElement('hr');
+            objectContainer.appendChild(separator);
+
+            // Append the object container to the main container
+            container.appendChild(objectContainer);
+
+            dataCounter = dataCounter + 1;
+        });
+    }
+</script>
+</html>

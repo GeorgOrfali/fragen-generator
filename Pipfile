@@ -16,7 +16,9 @@ numpy = "*"
 wn = "*"
 einops = "*"
 matplotlib = "*"
+HanTa = "*"
 tensorflow-text = "*"
+gunicorn = '*'
 
 
 [dev-packages]

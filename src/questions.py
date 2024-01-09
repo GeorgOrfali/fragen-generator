@@ -1,7 +1,6 @@
 import locale
 import re
 import wn
-import nltk
 import random
 
 locale.setlocale(locale.LC_ALL, 'de_DE')
@@ -37,27 +36,63 @@ def get_keywords(sentence):
 
 class BlankQuestion:
     question = {}
+    tagger = None
+
+    def __init__(self, tagger):
+        self.tagger = tagger
 
     def generate_question(self, sentence):
-        highest_frequency = get_keywords(sentence['sentence'])
-
-        if len(highest_frequency) > 0:
-            blank_word = highest_frequency[0][0]
+            blank_word = self.getBlankField(sentence['sentence'])
+            distractor = self.generate_distractors(blank_word)
             newQuestion = sentence['sentence'].replace(blank_word, '/blank/', 1).replace('\n', ' ')
             question = {
                 'type': 'LückenText',
                 'question': newQuestion,
+                'sentence': sentence,
                 'answer': blank_word,
-                # 'originalData': sentence
+                'distractors': distractor,
             }
             self.question = question
 
     def get_question(self):
         return self.question
 
+    def generate_distractors(self, word):
+        synset = wn.synsets(word)
+        if len(synset) > 0:
+            distractors = synset[0].get_related()
+            if len(distractors) > 0:
+                if len(distractors[0].lemmas()) > 0:
+                    return distractors[0].lemmas()
+        return []
+
+    def getBlankField(self, sentence):
+        result = ''
+        for word in sentence.split():
+            tag = self.tagger.analyze(word)
+            if tag[1] == 'NN':
+                result = word
+                synset = wn.synsets(word)
+                if len(synset) > 0:
+                    distractors = synset[0].get_related()
+                    if len(distractors) > 0:
+                        return result
+
+        # Wenn Die obere Methode kein Ergebnis liefert dann wird einfach highestFrequency genutzt
+        if result is '':
+            highest_frequency = get_keywords(sentence)
+            if len(highest_frequency) > 0:
+                result = highest_frequency[0][0]
+
+        return result
+
 
 class TrueFalseQuestion:
     question = {}
+    tagger = None
+
+    def __init__(self, tagger):
+        self.tagger = tagger
 
     def generate_true_question(self, sentence):
         question = {
@@ -68,25 +103,38 @@ class TrueFalseQuestion:
         self.question = question
 
     def generate_false_question(self, sentence):
-        wn.config.allow_multithreading = True
-        oldWord = sentence['sentence'].replace('\n', '').replace('.', '').split(' ')
-        newWord = ''
-        newSentence = sentence['sentence'].replace('\n', '').replace('▪', ',')
-        for i in range(len(oldWord)):
-            w = wn.synsets(oldWord[i], pos='a')
-            if len(w) > 0:
-                if i == 0:
-                    newWord = 'Nicht ' + oldWord[i]
-                else:
-                    newWord = 'nicht ' + oldWord[i]
-                newSentence = newSentence.replace(oldWord[i], newWord)
+        oldWord = sentence['sentence'].replace('\n', ' ').replace('.', '').split(' ')
+        newSentence = sentence['sentence'].replace('\n', ' ').replace('▪', ',')
+        #pre check for keine
+        skip = False
+        for w in oldWord:
+            if 'kein' in w:
+                newSentence = newSentence.replace(w, re.sub(r'^.', '', w), 1)
+                skip = True
                 break
+
+        if skip is False:
+            for i, word in enumerate(oldWord):
+                if word is not '':
+                    tag = self.tagger.analyze(word)
+                    if len(tag) > 1:
+                        if 'ADJ' in tag[1]:
+                            if i == 0:
+                                newWord = 'Nicht ' + word
+                            else:
+                                if '.' in oldWord[i]:
+                                    newWord = 'Nicht ' + word
+                                else:
+                                    newWord = 'nicht ' + word
+                            #newWord = oldWord[i] + 'nicht'
+                            newSentence = newSentence.replace(word, newWord, 1)
+                            break
 
         question = {
             'type': 'Wahr-Falsch',
             'question': newSentence,
-            'answer': 'Falsch',
-            # 'originalData': sentence
+            'sentence': sentence,
+            'answer': 'Falsch'
         }
         self.question = question
 
@@ -96,6 +144,8 @@ class TrueFalseQuestion:
             self.generate_true_question(sentence)
         else:
             self.generate_false_question(sentence)
+
+
 
     def get_question(self):
         return self.question
