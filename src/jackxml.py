@@ -18,15 +18,22 @@ class JACKXML():
         for aufgabe in aufgaben:
             if aufgabe is not None:
                 antworten = []
-                if aufgabe['type'] == 'Wahr-Falsch':
+                if aufgabe['type'] == 'Wahr-Falsch' or aufgabe['type'] == 'Single Choice':
                     mcstage = ET.SubElement(stages, 'MCStage', id=str(aid))
                     ET.SubElement(mcstage, 'internalName').text = '#' + str(aid)
                     ET.SubElement(mcstage, 'taskDescription').text = aufgabe['question']
-                    antworten.append({'answer': aufgabe['answer'], 'rule': 'CORRECT'})
-                    if aufgabe['answer'] == ' Wahr':
-                        antworten.append({'answer': 'Falsch', 'rule': 'WRONG'})
+                    if aufgabe['type'] == 'Wahr-Falsch':
+                        antworten.append({'answer': aufgabe['answer'], 'rule': 'CORRECT'})
+                        if aufgabe['answer'] == ' Wahr':
+                            antworten.append({'answer': 'Falsch', 'rule': 'WRONG'})
+                        else:
+                            antworten.append({'answer': 'Wahr', 'rule': 'WRONG'})
                     else:
-                        antworten.append({'answer': 'Wahr', 'rule': 'WRONG'})
+                        antworten.append({'answer': aufgabe['answer'], 'rule': 'CORRECT'})
+                        distractors = aufgabe['distractors'].split(',')
+
+                        for d in distractors:
+                            antworten.append({'answer': d, 'rule': 'WRONG'})
 
                     random.shuffle(antworten)
                     ET.SubElement(mcstage, 'allowSkip').text = 'false'
