@@ -1,0 +1,1305 @@
+{
+  "data": [
+    {
+      "answer": "java.util.Collections",
+      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw.",
+      "question": "Welche Klasse enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw. ?"
+    },
+    {
+      "answer": "Klassen",
+      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte, dann muss man sie importieren",
+      "question": "Was muss man importieren von den Paket java.util, wenn man es verwenden möchte ?"
+    },
+    {
+      "answer": "Elemente",
+      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente der Liste das Comparable-Interface implementieren.",
+      "question": "Was setzen die meisten Operationen allerdings voraus, dass von der Liste das Comparable-Interface implementiert wird ?"
+    },
+    {
+      "answer": "Object",
+      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object.",
+      "question": "Wo von erbt jede Klasse ?"
+    },
+    {
+      "answer": "Compiler",
+      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können.",
+      "question": "Wem wollen wir den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können ?"
+    },
+    {
+      "answer": "Java",
+      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren: Generics.",
+      "question": "Wer bietet seit Version 5 eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren namens Generics ?"
+    },
+    {
+      "answer": "Typparameter",
+      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T.",
+      "question": "Welche Konvention wird als einfache Großbuchstaben T angegeben ?"
+    },
+    {
+      "answer": "Generics",
+      "sentence": "Generics sind ein wesentlicher Bestandteil der Java Klassenbibliothek, viele der vordefinierten Klassen und Interfaces machen davon starken Gebrauch.",
+      "question": "Welche sind ein wesentlicher Bestandteil der Java Klassenbibliothek ?"
+    },
+    {
+      "answer": "Sortieren",
+      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator, die wir beim Sortieren von Objekten kennengelernt haben:",
+      "question": "Wo haben wir die Interfaces Comparable und Comparator kennengelernt ?"
+    },
+    {
+      "answer": "Datenstrukturen",
+      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen.",
+      "question": "Was befindet sich im Paket java.util ?"
+    },
+    {
+      "answer": "Instanzen",
+      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können die Instanzen dieser Klassen in einer foreach-Schleife verwendet werden und wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt werden kann.",
+      "question": "Was kann in einer foreach-Schleife verwendet werden, wenn eine Klasse das Iterable-Interface implementiert ?"
+    },
+    {
+      "answer": "Eigenschaften",
+      "sentence": "Das Queue-Interface und das Deque-Interface definieren Eigenschaften einer Queue (s. später), die als Sonderfall einer verketteten Liste betrachtet werden kann.",
+      "question": "Was definieren das Queue-Interface und das Deque-Interface in einer Queue ?"
+    },
+    {
+      "answer": "Spezialfall",
+      "sentence": "Die Klassen AbstractList und AbstractSequentialList implementieren v.a. solche Methoden, die einen Spezialfall einer anderen Methode darstellen.",
+      "question": "Welche Art von Methoden implementieren die Klassen AbstractList und AbstractSequentialList ?"
+    },
+    {
+      "answer": "Zustände",
+      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe von einem Band und haben endlich viele Zustände.",
+      "question": "Was haben endliche Automaten ?"
+    },
+    {
+      "answer": "Turingmaschinen",
+      "sentence": "Neben deterministischen Turingmaschinen gibt es auch nichtdeterministische Turingmaschinen.",
+      "question": "Was gibt es neben deterministisch auch in nichtdeterministisch ?"
+    },
+    {
+      "answer": "Wort",
+      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein Wort",
+      "question": "Durch was ist eine Konfiguration in einer Turingmaschine gegeben ?"
+    },
+    {
+      "answer": "Maschinenmodellen",
+      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei Turingmaschinen den Begriff einer Konfiguration, d.h., einer Momentaufnahme einer Turingmaschinen-Berechnung",
+      "question": "Turingmaschinen enthalten den Begriff der Konfiguration sowie auch andere ... ?"
+    },
+    {
+      "answer": "Eingabe-Wörter",
+      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die Turing-Maschine in einen Endzustand gelangen kann. Dabei startet die Turing-Maschine im Anfangszustand z0, der Kopf befindet sich auf dem ersten Zeichen des Eingabe-Wortes.",
+      "question": "Was muss in einer Turing-Maschine in einen Endzustand gelangen damit dies als Akzeptierte Sprache gilt ?"
+    },
+    {
+      "answer": "Endzustand",
+      "sentence": "Wenn eine Maschine M für ein Eingabewort w in einen Endzustand gelangt, dann sagt man auch, dass M auf w hält.",
+      "question": "Wie nennt man auch, wenn eine Maschine M auf w hält ?"
+    },
+	{
+	  "answer": "",
+	  "sentence": "Wenn ein neues Element in einen Binärbaum eingefügt werden soll, dann muss entschieden werden, ob man das Element in den linken oder in den rechten Teilbaum einfügt.",
+	  "question": ""
+	},
+    {
+      "answer": "",
+      "sentence": "Betriebe werden als Sozialgebilde verstanden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Aufgabe der BWL soll es sein, Normen für wirtschaftliches Handeln aus allgemeingültigen ethischen Grundwerten abzuleiten und die Wirtschaft dann in diesen Zustand zu überführen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unterstellte Zielfunktionen (Kosten, Gewinn, Nutzen) müssen optimiert werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der wirtschaftende Mensch kann aufgrund begrenzter Mittel im allgemeinen nicht alle Bedürfnisse befriedigen, sondern muss zwischen Alternativen wählen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Ansammlung von Firmen und Institutionen in den selben oder komplementären Geschäftsbereichen am gleichen Standort bilden flexible Netzwerke einander ergänzender Unternehmen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unternehmensführung muss Kunden, Mitarbeitern, Geldgebern und der Gesellschaft dienen und widerstreitende Interessen ausgleichen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Investitionen in F&E, Anlagen, Marketing zur Produkteinführung müssen künftigen Produkten zugerechnet werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wer nach der Maximin-Regel handelt, wird kein Unternehmer",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Überkapazitäten quantitativ/qualitativ/zeitlich/örtlich abbauen durch änderung und/oder Beendigung bestehender Arbeitsverhältnisse",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Anreizsysteme sollten Bedürfnisebene des Mitarbeiters berücksichtigen Ehemals motivierende Faktoren können ihre Wirkung verlieren",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit ist die sozial erzeugte Verteilung von Handlungsressourcen und Handlungsrestriktionen in der Bevölkerung der untersuchten Einheit",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit liegt vor, wenn Menschen unterschiedliches Wohlbefinden haben. Wird in der (westlichen) Ungleichheitsforschung eher selten verwendet, da „Wohlbefinden“ schwer messbar ist (keine intersubjektive Vergleichbarkeit möglich)",
+      "question": ""
+    }
+
+    ,
+    {
+      "answer": "",
+      "sentence": "Obwohl die Vereinigten Staaten wie auch viele Staaten des Commonwealth Erben des britischen Common Laws sind, setzt sich das amerikanische Recht bedeutend davon ab.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Bis jetzt sind noch keine endgültigen und genauen Ursachen für die Entstehung von nicht heterosexuellen Verhalten identifiziert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Deutschland und vielen anderen Ländern gilt Hundefleisch per Gesetz nicht mehr als Nahrungsmittel und darf auch nicht gehandelt oder in den Verkehr gebracht werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Hundefleisch wird in einigen Ländern gegessen und in der Gastronomie angeboten, zum Beispiel in Korea, Vietnam und einigen südlichen Provinzen Chinas wie Guangdong sowie in Teilen Afrikas.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Seit Windows NT 4.0 ist das Programm ''charmap.exe'', genannt ''Zeichentabelle'', in Windows integriert. Mit diesem Programm ist über eine grafische Benutzeroberfläche möglich, Unicode-Zeichen einzufügen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Stiftung unterstützt die Behandlung und Bekämpfung von Krankheiten in der ganzen Welt. Dazu gehören Projekte zur Versorgung von AIDS-Kranken in Botswana und die Bereitstellung von Geld für Impfprogramme von Kindern in Indien und Afrika.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Kalligrafie ist eine in China hochangesehene Kunst. Hierbei werden mit einem Pinsel die Zeichen schwungvoll zu Papier gebracht",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als die größte Energiequelle liefert die Sonne pro Jahr eine Energiemenge von etwa 1,5 · 1018 kWh auf die Erdoberfläche.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Johann unternahm im September eine Gegenoffensive, um Lincoln zu entsetzen. In der Nacht vom 9. auf den 10. Oktober erkrankte er wahrscheinlich an der Ruhr.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Alaska reichen die ältesten gesicherten Funde 12.000 bis 14.000 Jahre zurück. Als älteste Kultur galt lange Zeit die Clovis-Kultur. Doch spätestens die Funde in den Paisley-Höhlen, die rund ein Jahrtausend vor den Clovis-Funden liegen, zeigten, dass die frühesten Bewohner nicht dieser Kultur angehörten.",
+      "question": ""
+    },
+
+
+
+    {
+      "answer": "",
+      "sentence": "Während einige Kritiker die Bezeichnung „Post-Punk“ synonym zu New Wave, Independent oder Dark Wave verwenden, differenzieren andere zwischen der poppigeren New Wave von Bands wie Duran Duran und Visage und dem raueren Post-Punk.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wie auch andere westgermanische Sprachen dieser Zeit war Altenglisch eine flektierende Sprache mit fünf Kasus (Nominativ, Genitiv, Dativ, Akkusativ und Instrumental, der allerdings meist mit dem Dativ zusammengefallen ist), einem in den Personalpronomen der 1. und 2. Person noch erhaltenen Dual zusätzlich zu Singular und Plural. Außerdem hatte das Altenglische wie das Deutsche ein grammatisches Geschlecht bei allen Nomen, z. B. ''sēo sunne'' (dt. ‚die Sonne‘) und ''se mōna'' (dt. ‚der Mond‘).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im frühen 8. Jahrhundert begann eine arabische bzw. islamische Infiltration in Indien. Mit einem Sieg über die Rajputen Prithvirajas III. bei Delhi 1192 setzen sich die Muslime unter Muhammad von Ghur in Nordindien durch.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Universität zählt Jahr für Jahr zu den Top-20-Universitäten der USA (so auch die Rankings von U.S. News and World Report und Forbes).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "erst dann, wenn ein Umweltstimulus zunächst als relevant (positiv oder gefährlich) oder irrelevant eingestuft wird und daraufhin in einem zweiten Schritt die persönlichen Bewältigungsmöglichkeiten (siehe Coping) eingeschätzt werden. Dazu gehört auch die Frage, wer oder was den Stimulus ausgelöst hat.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Abhängig vom Ergebnis der subjektiven Bewertung reagiert das Subjekt mit der Ausschüttung bestimmter Neurotransmitter und Hormone und verändert damit seinen physiologischen Zustand.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Heizlampen strahlen im Infraroten und sind schon seit langem für medizinische Zwecke im Einsatz.\nWärmestrahlung von Heizstrahlern, wie keramische Infrarotstrahler mit langwelliger IR-Strahlung oder vorrangig nahes Infrarot emittierende Rotlichtlampen, werden zur örtlichen Behandlung von Entzündungen (beispielsweise der Nasennebenhöhlen) eingesetzt. Für die Ganzkörper-Behandlung kommen Infrarotwärmekabinen zum Einsatz. Infrarotstrahlung wird in der Medizin häufig in Form von Lasern genutzt. Die Einsatzgebiete umfassen dabei insbesondere die Haut-, Augen- und Zahnheilkunde (Messen, Veröden, Schneiden, Koagulieren, Lichttherapie). Außerdem wird mit Infrarot nach den (wärmeren) eigentlichen Entzündungsherden gesucht, um diese effektiver behandeln zu können. Zum Auffinden lokaler Entzündungsherde wird Thermografie eingesetzt.\nNahes Infrarot dringt tief in und unter die Haut ein, während insbesondere MIR bereits an der Oberfläche der Haut und der Hornhaut des Auges absorbiert wird. Nahes Infrarot hoher Intensität (Laserstrahlung) ist daher besonders gefährlich für Augen und Haut, da es im Auge unbemerkt bis zur Netzhaut gelangt, dort fokussiert wird und Zerstörungen verursachen kann. Am Körper wird es in Regionen absorbiert, in denen sich keine Temperatursensoren befinden und kann daher oft unbemerkt Schäden verursachen.\nZur Fiebermessung werden Pyrometer verwendet, die die Temperatur im Ohr anhand der Wärmestrahlung im mittleren Infrarot messen. Schließlich dient die Pulsoxymetrie zur Messung der Sauerstoffsättigung roter Blutkörperchen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Beim Fußball kommt es vor allem auf vier Punkte an: auf der Basis von körperlicher Fitness und Kondition aufbauend die spielerischen Fähigkeiten, die Ballfertigkeit, die Technik sowie die Taktik.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Erfindungen gab es schon in der Antike, wie z. B. die der archimedischen Schraube oder des Zahnrads durch Ktesibios. Jedoch war der Gedanke des Schutzes des geistigen Eigentums bis ins 14. Jahrhundert unbekannt, weil der Gesichtspunkt der Ideenverwertung in der handwerklichen Produktion weniger wichtig war.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In der weißrussischen Historiographie gibt es verschiedene Sichtweisen auf die Kiewer Rus. Während in der akademischen Geschichtswissenschaft überwiegend die russische und sowjetische Interpretation vertreten wird, messen nationalpatriotische Publizisten der Kiewer Rus eher eine geringe Bedeutung für die weißrussischen Geschichte bei.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Katalanisch ist Amtssprache in Andorra sowie, neben dem Spanischen, regionale Amtssprache in Katalonien, auf den Balearen und in Valencia.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der Geruchssinn spielt eine bedeutende Rolle in der Lebensweise der Säugetiere, unter anderem bei der Nahrungssuche und bei der Fortpflanzung, wo Pheromone die Paarungsbereitschaft signalisieren.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die ursprüngliche Bevölkerungsgruppe, die Pygmäen, zählt heute wenige Angehörige und lebt nur noch in den südwestlichen Regenwäldern.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Stammbaum der Kondensatoren für die Verwendung in Geräten der Elektronik\nIm Laufe der Geschichte der Kondensatoren haben sich viele industriell genutzte Bauarten, auch Familien oder Technologien genannt, entwickelt.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Kennzeichnend für ein AC-Hörfunkprogramm ist eine leichte Durchhörbarkeit mit dem Ziel, dass die Hörer das Programm möglichst lange verfolgen und sich insbesondere auch nicht durch Werbespots abschrecken lassen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "New York ist Sitz globaler Medienkonzerne (Time Warner, Viacom) sowie großer Fernseh- und Radionetzwerke (ABC, CBS, FOX, NBC). Dutzende New Yorker und unzählige nationale sowie internationale Radio- und Fernsehstationen sind über Kabel und Satellit zu empfangen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die bekanntesten Denkmäler im Land sind zum einen das in der Gemarkung Steinthaleben gelegene Kyffhäuserdenkmal, ein 81 Meter hohes, weithin sichtbares Denkmal auf dem gleichnamigen Gebirge bei Bad Frankenhausen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Mehrheit der arabischen Länder sieht den Nachbarn Iran mit Argwohn. Dies liegt unter anderem in dem einst von Chomeini proklamierten Revolutionsexport und dem allgemeinen Streben nach Einfluss in der Region begründet, der sich auch in der Finanzierung und militärischen Unterstützung bestimmter Gruppierungen äußert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als Zensur gilt im engeren Wortsinn das Eingreifen staatlicher oder sonstiger machtgestützter Institutionen, durch die im Sinne dieser Institutionen unerwünschte Inhalte von der Medienöffentlichkeit ferngehalten werden sollen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im Zentrum von Midtown wurde an der Ecke East 42nd Street/ Park Avenue zwischen 1903 und 1913 vom Architektenteam Warren & Wetmore aus Minnesota der Grand Central Terminal errichtet. ",
+      "question": ""
+    },
+    {
+      "answer": "java.util.Collections",
+      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw.",
+      "question": "Welche Klasse enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw. ?"
+    },
+    {
+      "answer": "Klassen",
+      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte, dann muss man sie importieren",
+      "question": "Was muss man importieren von den Paket java.util, wenn man es verwenden möchte ?"
+    },
+    {
+      "answer": "Elemente",
+      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente der Liste das Comparable-Interface implementieren.",
+      "question": "Was setzen die meisten Operationen allerdings voraus, dass von der Liste das Comparable-Interface implementiert wird ?"
+    },
+    {
+      "answer": "Object",
+      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object.",
+      "question": "Wo von erbt jede Klasse ?"
+    },
+    {
+      "answer": "Compiler",
+      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können.",
+      "question": "Wem wollen wir den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können ?"
+    },
+    {
+      "answer": "Java",
+      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren: Generics.",
+      "question": "Wer bietet seit Version 5 eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren namens Generics ?"
+    },
+    {
+      "answer": "Typparameter",
+      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T.",
+      "question": "Welche Konvention wird als einfache Großbuchstaben T angegeben ?"
+    },
+    {
+      "answer": "Generics",
+      "sentence": "Generics sind ein wesentlicher Bestandteil der Java Klassenbibliothek, viele der vordefinierten Klassen und Interfaces machen davon starken Gebrauch.",
+      "question": "Welche sind ein wesentlicher Bestandteil der Java Klassenbibliothek ?"
+    },
+    {
+      "answer": "Sortieren",
+      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator, die wir beim Sortieren von Objekten kennengelernt haben:",
+      "question": "Wo haben wir die Interfaces Comparable und Comparator kennengelernt ?"
+    },
+    {
+      "answer": "Datenstrukturen",
+      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen.",
+      "question": "Was befindet sich im Paket java.util ?"
+    },
+    {
+      "answer": "Instanzen",
+      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können die Instanzen dieser Klassen in einer foreach-Schleife verwendet werden und wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt werden kann.",
+      "question": "Was kann in einer foreach-Schleife verwendet werden, wenn eine Klasse das Iterable-Interface implementiert ?"
+    },
+    {
+      "answer": "Eigenschaften",
+      "sentence": "Das Queue-Interface und das Deque-Interface definieren Eigenschaften einer Queue (s. später), die als Sonderfall einer verketteten Liste betrachtet werden kann.",
+      "question": "Was definieren das Queue-Interface und das Deque-Interface in einer Queue ?"
+    },
+    {
+      "answer": "Spezialfall",
+      "sentence": "Die Klassen AbstractList und AbstractSequentialList implementieren v.a. solche Methoden, die einen Spezialfall einer anderen Methode darstellen.",
+      "question": "Welche Art von Methoden implementieren die Klassen AbstractList und AbstractSequentialList ?"
+    },
+    {
+      "answer": "Zustände",
+      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe von einem Band und haben endlich viele Zustände.",
+      "question": "Was haben endliche Automaten ?"
+    },
+    {
+      "answer": "Turingmaschinen",
+      "sentence": "Neben deterministischen Turingmaschinen gibt es auch nichtdeterministische Turingmaschinen.",
+      "question": "Was gibt es neben deterministisch auch in nichtdeterministisch ?"
+    },
+    {
+      "answer": "Wort",
+      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein Wort",
+      "question": "Durch was ist eine Konfiguration in einer Turingmaschine gegeben ?"
+    },
+    {
+      "answer": "Maschinenmodellen",
+      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei Turingmaschinen den Begriff einer Konfiguration, d.h., einer Momentaufnahme einer Turingmaschinen-Berechnung",
+      "question": "Turingmaschinen enthalten den Begriff der Konfiguration sowie auch andere ... ?"
+    },
+    {
+      "answer": "Eingabe-Wörter",
+      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die Turing-Maschine in einen Endzustand gelangen kann. Dabei startet die Turing-Maschine im Anfangszustand z0, der Kopf befindet sich auf dem ersten Zeichen des Eingabe-Wortes.",
+      "question": "Was muss in einer Turing-Maschine in einen Endzustand gelangen damit dies als Akzeptierte Sprache gilt ?"
+    },
+    {
+      "answer": "Endzustand",
+      "sentence": "Wenn eine Maschine M für ein Eingabewort w in einen Endzustand gelangt, dann sagt man auch, dass M auf w hält.",
+      "question": "Wie nennt man auch, wenn eine Maschine M auf w hält ?"
+    },
+	{
+	  "answer": "",
+	  "sentence": "Wenn ein neues Element in einen Binärbaum eingefügt werden soll, dann muss entschieden werden, ob man das Element in den linken oder in den rechten Teilbaum einfügt.",
+	  "question": ""
+	},
+    {
+      "answer": "",
+      "sentence": "Betriebe werden als Sozialgebilde verstanden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Aufgabe der BWL soll es sein, Normen für wirtschaftliches Handeln aus allgemeingültigen ethischen Grundwerten abzuleiten und die Wirtschaft dann in diesen Zustand zu überführen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unterstellte Zielfunktionen (Kosten, Gewinn, Nutzen) müssen optimiert werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der wirtschaftende Mensch kann aufgrund begrenzter Mittel im allgemeinen nicht alle Bedürfnisse befriedigen, sondern muss zwischen Alternativen wählen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Ansammlung von Firmen und Institutionen in den selben oder komplementären Geschäftsbereichen am gleichen Standort bilden flexible Netzwerke einander ergänzender Unternehmen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unternehmensführung muss Kunden, Mitarbeitern, Geldgebern und der Gesellschaft dienen und widerstreitende Interessen ausgleichen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Investitionen in F&E, Anlagen, Marketing zur Produkteinführung müssen künftigen Produkten zugerechnet werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wer nach der Maximin-Regel handelt, wird kein Unternehmer",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Überkapazitäten quantitativ/qualitativ/zeitlich/örtlich abbauen durch änderung und/oder Beendigung bestehender Arbeitsverhältnisse",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Anreizsysteme sollten Bedürfnisebene des Mitarbeiters berücksichtigen Ehemals motivierende Faktoren können ihre Wirkung verlieren",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit ist die sozial erzeugte Verteilung von Handlungsressourcen und Handlungsrestriktionen in der Bevölkerung der untersuchten Einheit",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit liegt vor, wenn Menschen unterschiedliches Wohlbefinden haben. Wird in der (westlichen) Ungleichheitsforschung eher selten verwendet, da „Wohlbefinden“ schwer messbar ist (keine intersubjektive Vergleichbarkeit möglich)",
+      "question": ""
+    }
+
+    ,
+    {
+      "answer": "",
+      "sentence": "Obwohl die Vereinigten Staaten wie auch viele Staaten des Commonwealth Erben des britischen Common Laws sind, setzt sich das amerikanische Recht bedeutend davon ab.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Bis jetzt sind noch keine endgültigen und genauen Ursachen für die Entstehung von nicht heterosexuellen Verhalten identifiziert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Deutschland und vielen anderen Ländern gilt Hundefleisch per Gesetz nicht mehr als Nahrungsmittel und darf auch nicht gehandelt oder in den Verkehr gebracht werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Hundefleisch wird in einigen Ländern gegessen und in der Gastronomie angeboten, zum Beispiel in Korea, Vietnam und einigen südlichen Provinzen Chinas wie Guangdong sowie in Teilen Afrikas.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Seit Windows NT 4.0 ist das Programm ''charmap.exe'', genannt ''Zeichentabelle'', in Windows integriert. Mit diesem Programm ist über eine grafische Benutzeroberfläche möglich, Unicode-Zeichen einzufügen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Stiftung unterstützt die Behandlung und Bekämpfung von Krankheiten in der ganzen Welt. Dazu gehören Projekte zur Versorgung von AIDS-Kranken in Botswana und die Bereitstellung von Geld für Impfprogramme von Kindern in Indien und Afrika.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Kalligrafie ist eine in China hochangesehene Kunst. Hierbei werden mit einem Pinsel die Zeichen schwungvoll zu Papier gebracht",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als die größte Energiequelle liefert die Sonne pro Jahr eine Energiemenge von etwa 1,5 · 1018 kWh auf die Erdoberfläche.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Johann unternahm im September eine Gegenoffensive, um Lincoln zu entsetzen. In der Nacht vom 9. auf den 10. Oktober erkrankte er wahrscheinlich an der Ruhr.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Alaska reichen die ältesten gesicherten Funde 12.000 bis 14.000 Jahre zurück. Als älteste Kultur galt lange Zeit die Clovis-Kultur. Doch spätestens die Funde in den Paisley-Höhlen, die rund ein Jahrtausend vor den Clovis-Funden liegen, zeigten, dass die frühesten Bewohner nicht dieser Kultur angehörten.",
+      "question": ""
+    },
+
+
+
+    {
+      "answer": "",
+      "sentence": "Während einige Kritiker die Bezeichnung „Post-Punk“ synonym zu New Wave, Independent oder Dark Wave verwenden, differenzieren andere zwischen der poppigeren New Wave von Bands wie Duran Duran und Visage und dem raueren Post-Punk.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wie auch andere westgermanische Sprachen dieser Zeit war Altenglisch eine flektierende Sprache mit fünf Kasus (Nominativ, Genitiv, Dativ, Akkusativ und Instrumental, der allerdings meist mit dem Dativ zusammengefallen ist), einem in den Personalpronomen der 1. und 2. Person noch erhaltenen Dual zusätzlich zu Singular und Plural. Außerdem hatte das Altenglische wie das Deutsche ein grammatisches Geschlecht bei allen Nomen, z. B. ''sēo sunne'' (dt. ‚die Sonne‘) und ''se mōna'' (dt. ‚der Mond‘).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im frühen 8. Jahrhundert begann eine arabische bzw. islamische Infiltration in Indien. Mit einem Sieg über die Rajputen Prithvirajas III. bei Delhi 1192 setzen sich die Muslime unter Muhammad von Ghur in Nordindien durch.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Universität zählt Jahr für Jahr zu den Top-20-Universitäten der USA (so auch die Rankings von U.S. News and World Report und Forbes).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "erst dann, wenn ein Umweltstimulus zunächst als relevant (positiv oder gefährlich) oder irrelevant eingestuft wird und daraufhin in einem zweiten Schritt die persönlichen Bewältigungsmöglichkeiten (siehe Coping) eingeschätzt werden. Dazu gehört auch die Frage, wer oder was den Stimulus ausgelöst hat.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Abhängig vom Ergebnis der subjektiven Bewertung reagiert das Subjekt mit der Ausschüttung bestimmter Neurotransmitter und Hormone und verändert damit seinen physiologischen Zustand.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Heizlampen strahlen im Infraroten und sind schon seit langem für medizinische Zwecke im Einsatz.\nWärmestrahlung von Heizstrahlern, wie keramische Infrarotstrahler mit langwelliger IR-Strahlung oder vorrangig nahes Infrarot emittierende Rotlichtlampen, werden zur örtlichen Behandlung von Entzündungen (beispielsweise der Nasennebenhöhlen) eingesetzt. Für die Ganzkörper-Behandlung kommen Infrarotwärmekabinen zum Einsatz. Infrarotstrahlung wird in der Medizin häufig in Form von Lasern genutzt. Die Einsatzgebiete umfassen dabei insbesondere die Haut-, Augen- und Zahnheilkunde (Messen, Veröden, Schneiden, Koagulieren, Lichttherapie). Außerdem wird mit Infrarot nach den (wärmeren) eigentlichen Entzündungsherden gesucht, um diese effektiver behandeln zu können. Zum Auffinden lokaler Entzündungsherde wird Thermografie eingesetzt.\nNahes Infrarot dringt tief in und unter die Haut ein, während insbesondere MIR bereits an der Oberfläche der Haut und der Hornhaut des Auges absorbiert wird. Nahes Infrarot hoher Intensität (Laserstrahlung) ist daher besonders gefährlich für Augen und Haut, da es im Auge unbemerkt bis zur Netzhaut gelangt, dort fokussiert wird und Zerstörungen verursachen kann. Am Körper wird es in Regionen absorbiert, in denen sich keine Temperatursensoren befinden und kann daher oft unbemerkt Schäden verursachen.\nZur Fiebermessung werden Pyrometer verwendet, die die Temperatur im Ohr anhand der Wärmestrahlung im mittleren Infrarot messen. Schließlich dient die Pulsoxymetrie zur Messung der Sauerstoffsättigung roter Blutkörperchen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Beim Fußball kommt es vor allem auf vier Punkte an: auf der Basis von körperlicher Fitness und Kondition aufbauend die spielerischen Fähigkeiten, die Ballfertigkeit, die Technik sowie die Taktik.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Erfindungen gab es schon in der Antike, wie z. B. die der archimedischen Schraube oder des Zahnrads durch Ktesibios. Jedoch war der Gedanke des Schutzes des geistigen Eigentums bis ins 14. Jahrhundert unbekannt, weil der Gesichtspunkt der Ideenverwertung in der handwerklichen Produktion weniger wichtig war.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In der weißrussischen Historiographie gibt es verschiedene Sichtweisen auf die Kiewer Rus. Während in der akademischen Geschichtswissenschaft überwiegend die russische und sowjetische Interpretation vertreten wird, messen nationalpatriotische Publizisten der Kiewer Rus eher eine geringe Bedeutung für die weißrussischen Geschichte bei.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Katalanisch ist Amtssprache in Andorra sowie, neben dem Spanischen, regionale Amtssprache in Katalonien, auf den Balearen und in Valencia.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der Geruchssinn spielt eine bedeutende Rolle in der Lebensweise der Säugetiere, unter anderem bei der Nahrungssuche und bei der Fortpflanzung, wo Pheromone die Paarungsbereitschaft signalisieren.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die ursprüngliche Bevölkerungsgruppe, die Pygmäen, zählt heute wenige Angehörige und lebt nur noch in den südwestlichen Regenwäldern.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Stammbaum der Kondensatoren für die Verwendung in Geräten der Elektronik\nIm Laufe der Geschichte der Kondensatoren haben sich viele industriell genutzte Bauarten, auch Familien oder Technologien genannt, entwickelt.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Kennzeichnend für ein AC-Hörfunkprogramm ist eine leichte Durchhörbarkeit mit dem Ziel, dass die Hörer das Programm möglichst lange verfolgen und sich insbesondere auch nicht durch Werbespots abschrecken lassen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "New York ist Sitz globaler Medienkonzerne (Time Warner, Viacom) sowie großer Fernseh- und Radionetzwerke (ABC, CBS, FOX, NBC). Dutzende New Yorker und unzählige nationale sowie internationale Radio- und Fernsehstationen sind über Kabel und Satellit zu empfangen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die bekanntesten Denkmäler im Land sind zum einen das in der Gemarkung Steinthaleben gelegene Kyffhäuserdenkmal, ein 81 Meter hohes, weithin sichtbares Denkmal auf dem gleichnamigen Gebirge bei Bad Frankenhausen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Mehrheit der arabischen Länder sieht den Nachbarn Iran mit Argwohn. Dies liegt unter anderem in dem einst von Chomeini proklamierten Revolutionsexport und dem allgemeinen Streben nach Einfluss in der Region begründet, der sich auch in der Finanzierung und militärischen Unterstützung bestimmter Gruppierungen äußert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als Zensur gilt im engeren Wortsinn das Eingreifen staatlicher oder sonstiger machtgestützter Institutionen, durch die im Sinne dieser Institutionen unerwünschte Inhalte von der Medienöffentlichkeit ferngehalten werden sollen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im Zentrum von Midtown wurde an der Ecke East 42nd Street/ Park Avenue zwischen 1903 und 1913 vom Architektenteam Warren & Wetmore aus Minnesota der Grand Central Terminal errichtet. ",
+      "question": ""
+    },
+    {
+      "answer": "java.util.Collections",
+      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw.",
+      "question": "Welche Klasse enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw. ?"
+    },
+    {
+      "answer": "Klassen",
+      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte, dann muss man sie importieren",
+      "question": "Was muss man importieren von den Paket java.util, wenn man es verwenden möchte ?"
+    },
+    {
+      "answer": "Elemente",
+      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente der Liste das Comparable-Interface implementieren.",
+      "question": "Was setzen die meisten Operationen allerdings voraus, dass von der Liste das Comparable-Interface implementiert wird ?"
+    },
+    {
+      "answer": "Object",
+      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object.",
+      "question": "Wo von erbt jede Klasse ?"
+    },
+    {
+      "answer": "Compiler",
+      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können.",
+      "question": "Wem wollen wir den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können ?"
+    },
+    {
+      "answer": "Java",
+      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren: Generics.",
+      "question": "Wer bietet seit Version 5 eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren namens Generics ?"
+    },
+    {
+      "answer": "Typparameter",
+      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T.",
+      "question": "Welche Konvention wird als einfache Großbuchstaben T angegeben ?"
+    },
+    {
+      "answer": "Generics",
+      "sentence": "Generics sind ein wesentlicher Bestandteil der Java Klassenbibliothek, viele der vordefinierten Klassen und Interfaces machen davon starken Gebrauch.",
+      "question": "Welche sind ein wesentlicher Bestandteil der Java Klassenbibliothek ?"
+    },
+    {
+      "answer": "Sortieren",
+      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator, die wir beim Sortieren von Objekten kennengelernt haben:",
+      "question": "Wo haben wir die Interfaces Comparable und Comparator kennengelernt ?"
+    },
+    {
+      "answer": "Datenstrukturen",
+      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen.",
+      "question": "Was befindet sich im Paket java.util ?"
+    },
+    {
+      "answer": "Instanzen",
+      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können die Instanzen dieser Klassen in einer foreach-Schleife verwendet werden und wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt werden kann.",
+      "question": "Was kann in einer foreach-Schleife verwendet werden, wenn eine Klasse das Iterable-Interface implementiert ?"
+    },
+    {
+      "answer": "Eigenschaften",
+      "sentence": "Das Queue-Interface und das Deque-Interface definieren Eigenschaften einer Queue (s. später), die als Sonderfall einer verketteten Liste betrachtet werden kann.",
+      "question": "Was definieren das Queue-Interface und das Deque-Interface in einer Queue ?"
+    },
+    {
+      "answer": "Spezialfall",
+      "sentence": "Die Klassen AbstractList und AbstractSequentialList implementieren v.a. solche Methoden, die einen Spezialfall einer anderen Methode darstellen.",
+      "question": "Welche Art von Methoden implementieren die Klassen AbstractList und AbstractSequentialList ?"
+    },
+    {
+      "answer": "Zustände",
+      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe von einem Band und haben endlich viele Zustände.",
+      "question": "Was haben endliche Automaten ?"
+    },
+    {
+      "answer": "Turingmaschinen",
+      "sentence": "Neben deterministischen Turingmaschinen gibt es auch nichtdeterministische Turingmaschinen.",
+      "question": "Was gibt es neben deterministisch auch in nichtdeterministisch ?"
+    },
+    {
+      "answer": "Wort",
+      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein Wort",
+      "question": "Durch was ist eine Konfiguration in einer Turingmaschine gegeben ?"
+    },
+    {
+      "answer": "Maschinenmodellen",
+      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei Turingmaschinen den Begriff einer Konfiguration, d.h., einer Momentaufnahme einer Turingmaschinen-Berechnung",
+      "question": "Turingmaschinen enthalten den Begriff der Konfiguration sowie auch andere ... ?"
+    },
+    {
+      "answer": "Eingabe-Wörter",
+      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die Turing-Maschine in einen Endzustand gelangen kann. Dabei startet die Turing-Maschine im Anfangszustand z0, der Kopf befindet sich auf dem ersten Zeichen des Eingabe-Wortes.",
+      "question": "Was muss in einer Turing-Maschine in einen Endzustand gelangen damit dies als Akzeptierte Sprache gilt ?"
+    },
+    {
+      "answer": "Endzustand",
+      "sentence": "Wenn eine Maschine M für ein Eingabewort w in einen Endzustand gelangt, dann sagt man auch, dass M auf w hält.",
+      "question": "Was nennt man, wenn eine Maschine M auf w hält ?"
+    },
+	{
+	  "answer": "",
+	  "sentence": "Wenn ein neues Element in einen Binärbaum eingefügt werden soll, dann muss entschieden werden, ob man das Element in den linken oder in den rechten Teilbaum einfügt.",
+	  "question": ""
+	},
+    {
+      "answer": "",
+      "sentence": "Betriebe werden als Sozialgebilde verstanden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Aufgabe der BWL soll es sein, Normen für wirtschaftliches Handeln aus allgemeingültigen ethischen Grundwerten abzuleiten und die Wirtschaft dann in diesen Zustand zu überführen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unterstellte Zielfunktionen (Kosten, Gewinn, Nutzen) müssen optimiert werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der wirtschaftende Mensch kann aufgrund begrenzter Mittel im allgemeinen nicht alle Bedürfnisse befriedigen, sondern muss zwischen Alternativen wählen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Ansammlung von Firmen und Institutionen in den selben oder komplementären Geschäftsbereichen am gleichen Standort bilden flexible Netzwerke einander ergänzender Unternehmen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unternehmensführung muss Kunden, Mitarbeitern, Geldgebern und der Gesellschaft dienen und widerstreitende Interessen ausgleichen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Investitionen in F&E, Anlagen, Marketing zur Produkteinführung müssen künftigen Produkten zugerechnet werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wer nach der Maximin-Regel handelt, wird kein Unternehmer",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Überkapazitäten quantitativ/qualitativ/zeitlich/örtlich abbauen durch änderung und/oder Beendigung bestehender Arbeitsverhältnisse",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Anreizsysteme sollten Bedürfnisebene des Mitarbeiters berücksichtigen Ehemals motivierende Faktoren können ihre Wirkung verlieren",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit ist die sozial erzeugte Verteilung von Handlungsressourcen und Handlungsrestriktionen in der Bevölkerung der untersuchten Einheit",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit liegt vor, wenn Menschen unterschiedliches Wohlbefinden haben. Wird in der (westlichen) Ungleichheitsforschung eher selten verwendet, da „Wohlbefinden“ schwer messbar ist (keine intersubjektive Vergleichbarkeit möglich)",
+      "question": ""
+    }
+
+    ,
+    {
+      "answer": "",
+      "sentence": "Obwohl die Vereinigten Staaten wie auch viele Staaten des Commonwealth Erben des britischen Common Laws sind, setzt sich das amerikanische Recht bedeutend davon ab.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Bis jetzt sind noch keine endgültigen und genauen Ursachen für die Entstehung von nicht heterosexuellen Verhalten identifiziert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Deutschland und vielen anderen Ländern gilt Hundefleisch per Gesetz nicht mehr als Nahrungsmittel und darf auch nicht gehandelt oder in den Verkehr gebracht werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Hundefleisch wird in einigen Ländern gegessen und in der Gastronomie angeboten, zum Beispiel in Korea, Vietnam und einigen südlichen Provinzen Chinas wie Guangdong sowie in Teilen Afrikas.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Seit Windows NT 4.0 ist das Programm ''charmap.exe'', genannt ''Zeichentabelle'', in Windows integriert. Mit diesem Programm ist über eine grafische Benutzeroberfläche möglich, Unicode-Zeichen einzufügen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Stiftung unterstützt die Behandlung und Bekämpfung von Krankheiten in der ganzen Welt. Dazu gehören Projekte zur Versorgung von AIDS-Kranken in Botswana und die Bereitstellung von Geld für Impfprogramme von Kindern in Indien und Afrika.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Kalligrafie ist eine in China hochangesehene Kunst. Hierbei werden mit einem Pinsel die Zeichen schwungvoll zu Papier gebracht",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als die größte Energiequelle liefert die Sonne pro Jahr eine Energiemenge von etwa 1,5 · 1018 kWh auf die Erdoberfläche.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Johann unternahm im September eine Gegenoffensive, um Lincoln zu entsetzen. In der Nacht vom 9. auf den 10. Oktober erkrankte er wahrscheinlich an der Ruhr.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Alaska reichen die ältesten gesicherten Funde 12.000 bis 14.000 Jahre zurück. Als älteste Kultur galt lange Zeit die Clovis-Kultur. Doch spätestens die Funde in den Paisley-Höhlen, die rund ein Jahrtausend vor den Clovis-Funden liegen, zeigten, dass die frühesten Bewohner nicht dieser Kultur angehörten.",
+      "question": ""
+    },
+
+
+
+    {
+      "answer": "",
+      "sentence": "Während einige Kritiker die Bezeichnung „Post-Punk“ synonym zu New Wave, Independent oder Dark Wave verwenden, differenzieren andere zwischen der poppigeren New Wave von Bands wie Duran Duran und Visage und dem raueren Post-Punk.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wie auch andere westgermanische Sprachen dieser Zeit war Altenglisch eine flektierende Sprache mit fünf Kasus (Nominativ, Genitiv, Dativ, Akkusativ und Instrumental, der allerdings meist mit dem Dativ zusammengefallen ist), einem in den Personalpronomen der 1. und 2. Person noch erhaltenen Dual zusätzlich zu Singular und Plural. Außerdem hatte das Altenglische wie das Deutsche ein grammatisches Geschlecht bei allen Nomen, z. B. ''sēo sunne'' (dt. ‚die Sonne‘) und ''se mōna'' (dt. ‚der Mond‘).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im frühen 8. Jahrhundert begann eine arabische bzw. islamische Infiltration in Indien. Mit einem Sieg über die Rajputen Prithvirajas III. bei Delhi 1192 setzen sich die Muslime unter Muhammad von Ghur in Nordindien durch.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Universität zählt Jahr für Jahr zu den Top-20-Universitäten der USA (so auch die Rankings von U.S. News and World Report und Forbes).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "erst dann, wenn ein Umweltstimulus zunächst als relevant (positiv oder gefährlich) oder irrelevant eingestuft wird und daraufhin in einem zweiten Schritt die persönlichen Bewältigungsmöglichkeiten (siehe Coping) eingeschätzt werden. Dazu gehört auch die Frage, wer oder was den Stimulus ausgelöst hat.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Abhängig vom Ergebnis der subjektiven Bewertung reagiert das Subjekt mit der Ausschüttung bestimmter Neurotransmitter und Hormone und verändert damit seinen physiologischen Zustand.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Heizlampen strahlen im Infraroten und sind schon seit langem für medizinische Zwecke im Einsatz.\nWärmestrahlung von Heizstrahlern, wie keramische Infrarotstrahler mit langwelliger IR-Strahlung oder vorrangig nahes Infrarot emittierende Rotlichtlampen, werden zur örtlichen Behandlung von Entzündungen (beispielsweise der Nasennebenhöhlen) eingesetzt. Für die Ganzkörper-Behandlung kommen Infrarotwärmekabinen zum Einsatz. Infrarotstrahlung wird in der Medizin häufig in Form von Lasern genutzt. Die Einsatzgebiete umfassen dabei insbesondere die Haut-, Augen- und Zahnheilkunde (Messen, Veröden, Schneiden, Koagulieren, Lichttherapie). Außerdem wird mit Infrarot nach den (wärmeren) eigentlichen Entzündungsherden gesucht, um diese effektiver behandeln zu können. Zum Auffinden lokaler Entzündungsherde wird Thermografie eingesetzt.\nNahes Infrarot dringt tief in und unter die Haut ein, während insbesondere MIR bereits an der Oberfläche der Haut und der Hornhaut des Auges absorbiert wird. Nahes Infrarot hoher Intensität (Laserstrahlung) ist daher besonders gefährlich für Augen und Haut, da es im Auge unbemerkt bis zur Netzhaut gelangt, dort fokussiert wird und Zerstörungen verursachen kann. Am Körper wird es in Regionen absorbiert, in denen sich keine Temperatursensoren befinden und kann daher oft unbemerkt Schäden verursachen.\nZur Fiebermessung werden Pyrometer verwendet, die die Temperatur im Ohr anhand der Wärmestrahlung im mittleren Infrarot messen. Schließlich dient die Pulsoxymetrie zur Messung der Sauerstoffsättigung roter Blutkörperchen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Beim Fußball kommt es vor allem auf vier Punkte an: auf der Basis von körperlicher Fitness und Kondition aufbauend die spielerischen Fähigkeiten, die Ballfertigkeit, die Technik sowie die Taktik.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Erfindungen gab es schon in der Antike, wie z. B. die der archimedischen Schraube oder des Zahnrads durch Ktesibios. Jedoch war der Gedanke des Schutzes des geistigen Eigentums bis ins 14. Jahrhundert unbekannt, weil der Gesichtspunkt der Ideenverwertung in der handwerklichen Produktion weniger wichtig war.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In der weißrussischen Historiographie gibt es verschiedene Sichtweisen auf die Kiewer Rus. Während in der akademischen Geschichtswissenschaft überwiegend die russische und sowjetische Interpretation vertreten wird, messen nationalpatriotische Publizisten der Kiewer Rus eher eine geringe Bedeutung für die weißrussischen Geschichte bei.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Katalanisch ist Amtssprache in Andorra sowie, neben dem Spanischen, regionale Amtssprache in Katalonien, auf den Balearen und in Valencia.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der Geruchssinn spielt eine bedeutende Rolle in der Lebensweise der Säugetiere, unter anderem bei der Nahrungssuche und bei der Fortpflanzung, wo Pheromone die Paarungsbereitschaft signalisieren.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die ursprüngliche Bevölkerungsgruppe, die Pygmäen, zählt heute wenige Angehörige und lebt nur noch in den südwestlichen Regenwäldern.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Stammbaum der Kondensatoren für die Verwendung in Geräten der Elektronik\nIm Laufe der Geschichte der Kondensatoren haben sich viele industriell genutzte Bauarten, auch Familien oder Technologien genannt, entwickelt.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Kennzeichnend für ein AC-Hörfunkprogramm ist eine leichte Durchhörbarkeit mit dem Ziel, dass die Hörer das Programm möglichst lange verfolgen und sich insbesondere auch nicht durch Werbespots abschrecken lassen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "New York ist Sitz globaler Medienkonzerne (Time Warner, Viacom) sowie großer Fernseh- und Radionetzwerke (ABC, CBS, FOX, NBC). Dutzende New Yorker und unzählige nationale sowie internationale Radio- und Fernsehstationen sind über Kabel und Satellit zu empfangen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die bekanntesten Denkmäler im Land sind zum einen das in der Gemarkung Steinthaleben gelegene Kyffhäuserdenkmal, ein 81 Meter hohes, weithin sichtbares Denkmal auf dem gleichnamigen Gebirge bei Bad Frankenhausen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Mehrheit der arabischen Länder sieht den Nachbarn Iran mit Argwohn. Dies liegt unter anderem in dem einst von Chomeini proklamierten Revolutionsexport und dem allgemeinen Streben nach Einfluss in der Region begründet, der sich auch in der Finanzierung und militärischen Unterstützung bestimmter Gruppierungen äußert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als Zensur gilt im engeren Wortsinn das Eingreifen staatlicher oder sonstiger machtgestützter Institutionen, durch die im Sinne dieser Institutionen unerwünschte Inhalte von der Medienöffentlichkeit ferngehalten werden sollen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im Zentrum von Midtown wurde an der Ecke East 42nd Street/ Park Avenue zwischen 1903 und 1913 vom Architektenteam Warren & Wetmore aus Minnesota der Grand Central Terminal errichtet. ",
+      "question": ""
+    },
+    {
+      "answer": "java.util.Collections",
+      "sentence": "Die Klasse java.util.Collections enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw.",
+      "question": "Welche Klasse enthält Klassenmethoden, die zusätzliche Operationen auf Listen realisieren: binäre Suche, Sortieren, Bestimmung von Minimum und Maximum, usw. ?"
+    },
+    {
+      "answer": "Klassen",
+      "sentence": "Wenn man die Klassen des Pakets java.util verwenden möchte, dann muss man sie importieren",
+      "question": "Was muss man importieren von den Paket java.util, wenn man es verwenden möchte ?"
+    },
+    {
+      "answer": "Elemente",
+      "sentence": "Die meisten Operationen setzen allerdings voraus, dass die Elemente der Liste das Comparable-Interface implementieren.",
+      "question": "Was setzen die meisten Operationen allerdings voraus, dass von der Liste das Comparable-Interface implementiert wird ?"
+    },
+    {
+      "answer": "Object",
+      "sentence": "Zur Erinnerung: Jede Klasse erbt automatisch von Object.",
+      "question": "Wo von erbt jede Klasse ?"
+    },
+    {
+      "answer": "Compiler",
+      "sentence": "Ein Dilemma: Wir wollen dem Compiler den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können.",
+      "question": "Wem wollen wir den Typ der Elemente in der Liste mitteilen und gleichzeitig die Implementierung der Liste nicht auf Elemente bestimmter Typen beschränken, damit wir sie immer wiederverwenden können ?"
+    },
+    {
+      "answer": "Java",
+      "sentence": "Seit Version 5 bietet Java eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren: Generics.",
+      "question": "Wer bietet seit Version 5 eine komfortable Möglichkeit, einerseits wiederverwendbare und andererseits typensichere Datenstrukturen zu konstruieren namens Generics ?"
+    },
+    {
+      "answer": "Typparameter",
+      "sentence": "Konvention ist, Typparameter als einfache Großbuchstaben anzugeben, hier T.",
+      "question": "Welche Konvention wird als einfache Großbuchstaben T angegeben ?"
+    },
+    {
+      "answer": "Generics",
+      "sentence": "Generics sind ein wesentlicher Bestandteil der Java Klassenbibliothek, viele der vordefinierten Klassen und Interfaces machen davon starken Gebrauch.",
+      "question": "Welche sind ein wesentlicher Bestandteil der Java Klassenbibliothek ?"
+    },
+    {
+      "answer": "Sortieren",
+      "sentence": "Zwei Beispiele sind die Interfaces Comparable und Comparator, die wir beim Sortieren von Objekten kennengelernt haben:",
+      "question": "Wo haben wir die Interfaces Comparable und Comparator kennengelernt ?"
+    },
+    {
+      "answer": "Datenstrukturen",
+      "sentence": "Im Paket java.util befinden sich u. a. dynamische Datenstrukturen.",
+      "question": "Was befindet sich im Paket java.util ?"
+    },
+    {
+      "answer": "Instanzen",
+      "sentence": "Wenn eine Klasse das Iterable-Interface implementiert, dann können die Instanzen dieser Klassen in einer foreach-Schleife verwendet werden und wir verstehen nun, wie das Iterable-Interface typsicher eingesetzt werden kann.",
+      "question": "Was kann in einer foreach-Schleife verwendet werden, wenn eine Klasse das Iterable-Interface implementiert ?"
+    },
+    {
+      "answer": "Eigenschaften",
+      "sentence": "Das Queue-Interface und das Deque-Interface definieren Eigenschaften einer Queue (s. später), die als Sonderfall einer verketteten Liste betrachtet werden kann.",
+      "question": "Was definieren das Queue-Interface und das Deque-Interface in einer Queue ?"
+    },
+    {
+      "answer": "Spezialfall",
+      "sentence": "Die Klassen AbstractList und AbstractSequentialList implementieren v.a. solche Methoden, die einen Spezialfall einer anderen Methode darstellen.",
+      "question": "Welche Art von Methoden implementieren die Klassen AbstractList und AbstractSequentialList ?"
+    },
+    {
+      "answer": "Zustände",
+      "sentence": "Wie endliche Automaten lesen Turing-Maschinen eine Eingabe von einem Band und haben endlich viele Zustände.",
+      "question": "Was haben endliche Automaten ?"
+    },
+    {
+      "answer": "Turingmaschinen",
+      "sentence": "Neben deterministischen Turingmaschinen gibt es auch nichtdeterministische Turingmaschinen.",
+      "question": "Was gibt es neben deterministisch auch in nichtdeterministisch ?"
+    },
+    {
+      "answer": "Wort",
+      "sentence": "Eine Konfiguration einer Turingmaschine ist gegeben durch ein Wort",
+      "question": "Durch was ist eine Konfiguration in einer Turingmaschine gegeben ?"
+    },
+    {
+      "answer": "Maschinenmodellen",
+      "sentence": "Wie bei anderen Maschinenmodellen gibt es auch bei Turingmaschinen den Begriff einer Konfiguration, d.h., einer Momentaufnahme einer Turingmaschinen-Berechnung",
+      "question": "Turingmaschinen enthalten den Begriff der Konfiguration sowie auch andere ... ?"
+    },
+    {
+      "answer": "Eingabe-Wörter",
+      "sentence": "Akzeptierte Sprache: Alle Eingabe-Wörter, mit denen die Turing-Maschine in einen Endzustand gelangen kann. Dabei startet die Turing-Maschine im Anfangszustand z0, der Kopf befindet sich auf dem ersten Zeichen des Eingabe-Wortes.",
+      "question": "Was muss in einer Turing-Maschine in einen Endzustand gelangen damit dies als Akzeptierte Sprache gilt ?"
+    },
+    {
+      "answer": "Endzustand",
+      "sentence": "Wenn eine Maschine M für ein Eingabewort w in einen Endzustand gelangt, dann sagt man auch, dass M auf w hält.",
+      "question": "Wie nennt man auch, wenn eine Maschine M auf w hält ?"
+    },
+	{
+	  "answer": "",
+	  "sentence": "Wenn ein neues Element in einen Binärbaum eingefügt werden soll, dann muss entschieden werden, ob man das Element in den linken oder in den rechten Teilbaum einfügt.",
+	  "question": ""
+	},
+    {
+      "answer": "",
+      "sentence": "Betriebe werden als Sozialgebilde verstanden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Aufgabe der BWL soll es sein, Normen für wirtschaftliches Handeln aus allgemeingültigen ethischen Grundwerten abzuleiten und die Wirtschaft dann in diesen Zustand zu überführen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unterstellte Zielfunktionen (Kosten, Gewinn, Nutzen) müssen optimiert werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der wirtschaftende Mensch kann aufgrund begrenzter Mittel im allgemeinen nicht alle Bedürfnisse befriedigen, sondern muss zwischen Alternativen wählen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Ansammlung von Firmen und Institutionen in den selben oder komplementären Geschäftsbereichen am gleichen Standort bilden flexible Netzwerke einander ergänzender Unternehmen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Unternehmensführung muss Kunden, Mitarbeitern, Geldgebern und der Gesellschaft dienen und widerstreitende Interessen ausgleichen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Investitionen in F&E, Anlagen, Marketing zur Produkteinführung müssen künftigen Produkten zugerechnet werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wer nach der Maximin-Regel handelt, wird kein Unternehmer",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Überkapazitäten quantitativ/qualitativ/zeitlich/örtlich abbauen durch änderung und/oder Beendigung bestehender Arbeitsverhältnisse",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Anreizsysteme sollten Bedürfnisebene des Mitarbeiters berücksichtigen Ehemals motivierende Faktoren können ihre Wirkung verlieren",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Sind bestellfixe Kosten hoch, wird die optimale Bestellmenge größer sein Ein hoher Lagerwert spricht eher für kleinere Bestellmengen",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit ist die sozial erzeugte Verteilung von Handlungsressourcen und Handlungsrestriktionen in der Bevölkerung der untersuchten Einheit",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Soziale Ungleichheit liegt vor, wenn Menschen unterschiedliches Wohlbefinden haben. Wird in der (westlichen) Ungleichheitsforschung eher selten verwendet, da „Wohlbefinden“ schwer messbar ist (keine intersubjektive Vergleichbarkeit möglich)",
+      "question": ""
+    }
+
+    ,
+    {
+      "answer": "",
+      "sentence": "Obwohl die Vereinigten Staaten wie auch viele Staaten des Commonwealth Erben des britischen Common Laws sind, setzt sich das amerikanische Recht bedeutend davon ab.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Bis jetzt sind noch keine endgültigen und genauen Ursachen für die Entstehung von nicht heterosexuellen Verhalten identifiziert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Deutschland und vielen anderen Ländern gilt Hundefleisch per Gesetz nicht mehr als Nahrungsmittel und darf auch nicht gehandelt oder in den Verkehr gebracht werden",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Hundefleisch wird in einigen Ländern gegessen und in der Gastronomie angeboten, zum Beispiel in Korea, Vietnam und einigen südlichen Provinzen Chinas wie Guangdong sowie in Teilen Afrikas.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Seit Windows NT 4.0 ist das Programm ''charmap.exe'', genannt ''Zeichentabelle'', in Windows integriert. Mit diesem Programm ist über eine grafische Benutzeroberfläche möglich, Unicode-Zeichen einzufügen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Stiftung unterstützt die Behandlung und Bekämpfung von Krankheiten in der ganzen Welt. Dazu gehören Projekte zur Versorgung von AIDS-Kranken in Botswana und die Bereitstellung von Geld für Impfprogramme von Kindern in Indien und Afrika.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Kalligrafie ist eine in China hochangesehene Kunst. Hierbei werden mit einem Pinsel die Zeichen schwungvoll zu Papier gebracht",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als die größte Energiequelle liefert die Sonne pro Jahr eine Energiemenge von etwa 1,5 · 1018 kWh auf die Erdoberfläche.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Johann unternahm im September eine Gegenoffensive, um Lincoln zu entsetzen. In der Nacht vom 9. auf den 10. Oktober erkrankte er wahrscheinlich an der Ruhr.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In Alaska reichen die ältesten gesicherten Funde 12.000 bis 14.000 Jahre zurück. Als älteste Kultur galt lange Zeit die Clovis-Kultur. Doch spätestens die Funde in den Paisley-Höhlen, die rund ein Jahrtausend vor den Clovis-Funden liegen, zeigten, dass die frühesten Bewohner nicht dieser Kultur angehörten.",
+      "question": ""
+    },
+
+
+
+    {
+      "answer": "",
+      "sentence": "Während einige Kritiker die Bezeichnung „Post-Punk“ synonym zu New Wave, Independent oder Dark Wave verwenden, differenzieren andere zwischen der poppigeren New Wave von Bands wie Duran Duran und Visage und dem raueren Post-Punk.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Wie auch andere westgermanische Sprachen dieser Zeit war Altenglisch eine flektierende Sprache mit fünf Kasus (Nominativ, Genitiv, Dativ, Akkusativ und Instrumental, der allerdings meist mit dem Dativ zusammengefallen ist), einem in den Personalpronomen der 1. und 2. Person noch erhaltenen Dual zusätzlich zu Singular und Plural. Außerdem hatte das Altenglische wie das Deutsche ein grammatisches Geschlecht bei allen Nomen, z. B. ''sēo sunne'' (dt. ‚die Sonne‘) und ''se mōna'' (dt. ‚der Mond‘).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im frühen 8. Jahrhundert begann eine arabische bzw. islamische Infiltration in Indien. Mit einem Sieg über die Rajputen Prithvirajas III. bei Delhi 1192 setzen sich die Muslime unter Muhammad von Ghur in Nordindien durch.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Universität zählt Jahr für Jahr zu den Top-20-Universitäten der USA (so auch die Rankings von U.S. News and World Report und Forbes).",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "erst dann, wenn ein Umweltstimulus zunächst als relevant (positiv oder gefährlich) oder irrelevant eingestuft wird und daraufhin in einem zweiten Schritt die persönlichen Bewältigungsmöglichkeiten (siehe Coping) eingeschätzt werden. Dazu gehört auch die Frage, wer oder was den Stimulus ausgelöst hat.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Abhängig vom Ergebnis der subjektiven Bewertung reagiert das Subjekt mit der Ausschüttung bestimmter Neurotransmitter und Hormone und verändert damit seinen physiologischen Zustand.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Heizlampen strahlen im Infraroten und sind schon seit langem für medizinische Zwecke im Einsatz.\nWärmestrahlung von Heizstrahlern, wie keramische Infrarotstrahler mit langwelliger IR-Strahlung oder vorrangig nahes Infrarot emittierende Rotlichtlampen, werden zur örtlichen Behandlung von Entzündungen (beispielsweise der Nasennebenhöhlen) eingesetzt. Für die Ganzkörper-Behandlung kommen Infrarotwärmekabinen zum Einsatz. Infrarotstrahlung wird in der Medizin häufig in Form von Lasern genutzt. Die Einsatzgebiete umfassen dabei insbesondere die Haut-, Augen- und Zahnheilkunde (Messen, Veröden, Schneiden, Koagulieren, Lichttherapie). Außerdem wird mit Infrarot nach den (wärmeren) eigentlichen Entzündungsherden gesucht, um diese effektiver behandeln zu können. Zum Auffinden lokaler Entzündungsherde wird Thermografie eingesetzt.\nNahes Infrarot dringt tief in und unter die Haut ein, während insbesondere MIR bereits an der Oberfläche der Haut und der Hornhaut des Auges absorbiert wird. Nahes Infrarot hoher Intensität (Laserstrahlung) ist daher besonders gefährlich für Augen und Haut, da es im Auge unbemerkt bis zur Netzhaut gelangt, dort fokussiert wird und Zerstörungen verursachen kann. Am Körper wird es in Regionen absorbiert, in denen sich keine Temperatursensoren befinden und kann daher oft unbemerkt Schäden verursachen.\nZur Fiebermessung werden Pyrometer verwendet, die die Temperatur im Ohr anhand der Wärmestrahlung im mittleren Infrarot messen. Schließlich dient die Pulsoxymetrie zur Messung der Sauerstoffsättigung roter Blutkörperchen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Beim Fußball kommt es vor allem auf vier Punkte an: auf der Basis von körperlicher Fitness und Kondition aufbauend die spielerischen Fähigkeiten, die Ballfertigkeit, die Technik sowie die Taktik.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Erfindungen gab es schon in der Antike, wie z. B. die der archimedischen Schraube oder des Zahnrads durch Ktesibios. Jedoch war der Gedanke des Schutzes des geistigen Eigentums bis ins 14. Jahrhundert unbekannt, weil der Gesichtspunkt der Ideenverwertung in der handwerklichen Produktion weniger wichtig war.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "In der weißrussischen Historiographie gibt es verschiedene Sichtweisen auf die Kiewer Rus. Während in der akademischen Geschichtswissenschaft überwiegend die russische und sowjetische Interpretation vertreten wird, messen nationalpatriotische Publizisten der Kiewer Rus eher eine geringe Bedeutung für die weißrussischen Geschichte bei.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Katalanisch ist Amtssprache in Andorra sowie, neben dem Spanischen, regionale Amtssprache in Katalonien, auf den Balearen und in Valencia.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Der Geruchssinn spielt eine bedeutende Rolle in der Lebensweise der Säugetiere, unter anderem bei der Nahrungssuche und bei der Fortpflanzung, wo Pheromone die Paarungsbereitschaft signalisieren.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die ursprüngliche Bevölkerungsgruppe, die Pygmäen, zählt heute wenige Angehörige und lebt nur noch in den südwestlichen Regenwäldern.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Stammbaum der Kondensatoren für die Verwendung in Geräten der Elektronik\nIm Laufe der Geschichte der Kondensatoren haben sich viele industriell genutzte Bauarten, auch Familien oder Technologien genannt, entwickelt.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Kennzeichnend für ein AC-Hörfunkprogramm ist eine leichte Durchhörbarkeit mit dem Ziel, dass die Hörer das Programm möglichst lange verfolgen und sich insbesondere auch nicht durch Werbespots abschrecken lassen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "New York ist Sitz globaler Medienkonzerne (Time Warner, Viacom) sowie großer Fernseh- und Radionetzwerke (ABC, CBS, FOX, NBC). Dutzende New Yorker und unzählige nationale sowie internationale Radio- und Fernsehstationen sind über Kabel und Satellit zu empfangen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die bekanntesten Denkmäler im Land sind zum einen das in der Gemarkung Steinthaleben gelegene Kyffhäuserdenkmal, ein 81 Meter hohes, weithin sichtbares Denkmal auf dem gleichnamigen Gebirge bei Bad Frankenhausen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Die Mehrheit der arabischen Länder sieht den Nachbarn Iran mit Argwohn. Dies liegt unter anderem in dem einst von Chomeini proklamierten Revolutionsexport und dem allgemeinen Streben nach Einfluss in der Region begründet, der sich auch in der Finanzierung und militärischen Unterstützung bestimmter Gruppierungen äußert.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Als Zensur gilt im engeren Wortsinn das Eingreifen staatlicher oder sonstiger machtgestützter Institutionen, durch die im Sinne dieser Institutionen unerwünschte Inhalte von der Medienöffentlichkeit ferngehalten werden sollen.",
+      "question": ""
+    },
+    {
+      "answer": "",
+      "sentence": "Im Zentrum von Midtown wurde an der Ecke East 42nd Street/ Park Avenue zwischen 1903 und 1913 vom Architektenteam Warren & Wetmore aus Minnesota der Grand Central Terminal errichtet. ",
+      "question": ""
+    }
+
+  ]
+}
