@@ -43,14 +43,14 @@ class BlankQuestion:
 
     def generate_question(self, sentence):
             blank_word = self.getBlankField(sentence['sentence'])
-            distractor = self.generate_distractors(blank_word)
+            #distractor = self.generate_distractors(blank_word)
             newQuestion = sentence['sentence'].replace(blank_word, '/blank/', 1).replace('\n', ' ')
             question = {
                 'type': 'LückenText',
                 'question': newQuestion,
                 'sentence': sentence,
-                'answer': blank_word,
-                'distractors': distractor,
+                'answer': blank_word
+                #'distractors': distractor,
             }
             self.question = question
 

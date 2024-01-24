@@ -123,7 +123,8 @@ def generate(url, aufgabenart):
             else:
                 generator[1].generate_question(s)
                 tempBlankQ = generator[1].get_question()
-                questions.append(generateSingleChoice(generator[0], tempBlankQ))
+                distractors = generator[1].generate_distractors(tempBlankQ['answer'])
+                questions.append(generateSingleChoice(generator[0], tempBlankQ, distractors))
 
     os.remove(url)
     return questions
@@ -143,8 +144,9 @@ def generateAll(url):
 
         questions.append(tfq.get_question())
         blankQuestion = blank_question_generator.get_question()
+        distractors = blank_question_generator.generate_distractors(blankQuestion['answer'])
         questions.append(blankQuestion)
-        questions.append(generateSingleChoice(QuestionRNN, blankQuestion))
+        questions.append(generateSingleChoice(QuestionRNN, blankQuestion, distractors))
 
     print("Len Sentences: ", len(sentences))
     print("Len Questions: ", len(questions))
@@ -170,14 +172,14 @@ def extract_sentences(url, tagger):
     return summary.get_sentences()
 
 
-def generateSingleChoice(mlModel, blankQuestion):
+def generateSingleChoice(mlModel, blankQuestion, distractors):
     inputSentence = blankQuestion['question'].replace('/blank/', '<A>') + ' <A> ' + blankQuestion['answer']
     questionEncode = mlModel.generate(tf.constant([inputSentence]))
     question = SingleChoice().decode(questionEncode, [inputSentence])
     return {
         'answer': blankQuestion['answer'],
-        'distractors': blankQuestion['distractors'],
-        'question': question[0],
+        'distractors': distractors,
+        'question': question[0]+' '+blankQuestion['question'].replace('/blank/', ''),
         'sentence': blankQuestion['sentence'],
         'type': 'Single Choice',
     }

@@ -45,6 +45,16 @@ class JACKXML():
                         ET.SubElement(mcanswers, 'mcstage', reference=str(aid))
                     ET.SubElement(mcstage, 'singleChoice').text = 'true'
 
+                elif aufgabe['type'] == 'LückenText':
+                    fillstage = ET.SubElement(stages, 'FillInStage', id=str(aid))
+                    ET.SubElement(fillstage, 'internalName').text = '#' + str(aid)
+                    question = aufgabe['question'].replace('/blank', '&amp;nbsp;&lt;input name=&quot;fillin'+str(aid)+'&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;')
+                    ET.SubElement(fillstage, 'taskDescription').text = question
+                    ca = ET.SubElement(fillstage, 'correctAnswerRules')
+                    r = ET.SubElement(ca, 'Rule')
+                    ve = ET.SubElement(r, 'validationExpression')
+                    ET.SubElement(ve,'code').text = 'equals([input=fillin'+str(aid)+'], &apos;'+aufgabe['answer']+'&apos;)'
+
 
                 aid = aid + 1
         self.indent(root)

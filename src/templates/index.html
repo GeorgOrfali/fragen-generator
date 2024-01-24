@@ -50,17 +50,17 @@
                             </div>
 
                             <label class="fieldlabels">Aufgaben Arten</label>
-                            <select id="aufgabenart" class="form-select">
-                                <option selected disabled>Wählen Sie die Art der Aufgaben</option>
-                                <option value="w">Wahr-Falsch</option>
+                            <select id="aufgabenart" class="form-select" required>
+                                <option disabled value="default">Wählen Sie die Art der Aufgaben</option>
+                                <option selected value="w">Wahr-Falsch</option>
                                 <option value="l">Lückentext</option>
                                 <option value="s">Single Choice</option>
-                                <option value="g">Gemischt</option>
+                                <!--<option value="g">Gemischt</option>-->
                             </select>
                             <!--<label class="fieldlabels">Anzahl der maximalen Anzahl generierten Fragen</label>
                             <input type="number" class="form-control" min="1" placeholder="2" /> -->
                             <label for="formFileLg" class="form-label">Vorlesungsdatei als PDF hochladen:</label>
-                            <input class="form-control" id="formFileLg" type="file">
+                            <input class="form-control" id="formFileLg" type="file" required>
 
                         </div>
                         <input id="FirstNext" type="button" name="next" class="next action-button" value="Weiter" onclick="sendFile()"/>
@@ -156,27 +156,28 @@
         var file = fileInput.files[0];
 
         var aufgabenart = document.getElementById('aufgabenart');
+        if (aufgabenart.value !== "default") {
+            var formData = new FormData();
+            formData.append('file', file);
+            formData.append('aufgabenart', aufgabenart.value);
 
-        var formData = new FormData();
-        formData.append('file', file);
-        formData.append('aufgabenart',aufgabenart.value);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/upload', true);
 
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/upload', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    // File uploaded successfully
+                    Aufgaben = xhr.responseText;
+                    document.getElementById('NextAufgaben').click();
+                    parseJsonArray(Aufgaben, 'Aufgaben')
+                } else {
+                    // Error handling
+                    console.error('Error:', xhr.status);
+                }
+            };
 
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                // File uploaded successfully
-                Aufgaben = xhr.responseText;
-                document.getElementById('NextAufgaben').click();
-                parseJsonArray(Aufgaben, 'Aufgaben')
-            } else {
-                // Error handling
-                console.error('Error:', xhr.status);
-            }
-        };
-
-        xhr.send(formData);
+            xhr.send(formData);
+        }
     }
 
     var selectedTasks = [];
