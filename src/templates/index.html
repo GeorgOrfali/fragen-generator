@@ -59,6 +59,13 @@
                             </select>
                             <!--<label class="fieldlabels">Anzahl der maximalen Anzahl generierten Fragen</label>
                             <input type="number" class="form-control" min="1" placeholder="2" /> -->
+                            <br/>
+                            <label class="fieldlabels">Genauigkeitsfilter</label>
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="100" value="100" class="slider" id="genauigkeit" oninput="showGenauigkeit()">
+                                <span id="genauigkeitanzeige">100</span>
+                            </div>
+
                             <label for="formFileLg" class="form-label">Vorlesungsdatei als PDF hochladen:</label>
                             <input class="form-control" id="formFileLg" type="file" required>
 
@@ -149,18 +156,25 @@
 <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/progress.js') }}"></script>
 <script>
+    function showGenauigkeit(){
+        var range = document.getElementById('genauigkeit');
+        document.getElementById('genauigkeitanzeige').textContent = range.value;
+    }
+
     var Aufgaben;
     function sendFile() {
         // Assuming you have a file input element with id "fileInput"
         var fileInput = document.getElementById('formFileLg');
         var file = fileInput.files[0];
 
+        var genauigkeit = document.getElementById('genauigkeit');
         var aufgabenart = document.getElementById('aufgabenart');
+
         if (aufgabenart.value !== "default") {
             var formData = new FormData();
             formData.append('file', file);
             formData.append('aufgabenart', aufgabenart.value);
-
+            formData.append('genauigkeit', genauigkeit.value);
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/upload', true);
 
@@ -169,6 +183,7 @@
                     // File uploaded successfully
                     Aufgaben = xhr.responseText;
                     document.getElementById('NextAufgaben').click();
+                    console.log(Aufgaben);
                     parseJsonArray(Aufgaben, 'Aufgaben')
                 } else {
                     // Error handling

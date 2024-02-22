@@ -13,12 +13,14 @@ class Summarizer:
     sentences = []
     tagger = None
     word_Count = 0
+    genauigkeit = 100
 
-    def __init__(self, pdf, tagger):
+    def __init__(self, pdf, tagger, genauigkeit):
         self.pdf = pdf
         self.load_data()
         self.tagger = tagger
         self.sentences = []
+        self.genauigkeit = genauigkeit
 
     def load_data(self):
         with self.data_path.open(mode='rt', encoding='utf-8') as f:
@@ -53,9 +55,9 @@ class Summarizer:
             threshold=None,
             fast_power_method=True,
         )
-
+        genauigkeit = self.genauigkeit / 100
         for index, rankSentence in enumerate(summary):
-            if rankSentence > 1:
+            if rankSentence > genauigkeit:
                 self.sentences.append({
                     'sentence': filteredSentences[index],
                 })

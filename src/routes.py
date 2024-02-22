@@ -88,7 +88,7 @@ def upload_file():
 
     file.save('uploads/' + file.filename)
     print("File Name of PDF: " + file.filename)
-    return generate('uploads/' + file.filename, request.values['aufgabenart']), 200
+    return generate('uploads/' + file.filename, request.values), 200
 
 @app.route('/xml', methods=['POST'])
 def generate_xml():
@@ -101,12 +101,13 @@ def generate_xml():
     response.headers['Content-type'] = 'application/force-download'
     return response
 
-def generate(url, aufgabenart):
+def generate(url, optionen):
     tagger = setup()
     questions = []
     generator = None
 
-    sentences = extract_sentences(url, tagger)
+    sentences = extract_sentences(url, tagger, int(optionen['genauigkeit']))
+    aufgabenart = optionen['aufgabenart']
 
     if aufgabenart == 'w':
         generator = TrueFalseQuestion(tagger)
@@ -166,8 +167,8 @@ def setup():
     return tagger
 
 
-def extract_sentences(url, tagger):
-    summary = Summarizer(url, tagger)
+def extract_sentences(url, tagger, genauigkeit=100):
+    summary = Summarizer(url, tagger, genauigkeit)
     summary.extract_question_worthy_sentences()
     return summary.get_sentences()
 
