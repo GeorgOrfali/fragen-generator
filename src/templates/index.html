@@ -222,7 +222,11 @@
         var dataArray = JSON.parse(array);
         var container = document.getElementById(container2);
         var dataCounter = 0;
-// Loop through the JSON array
+        // reset container
+          while (container.lastElementChild) {
+                container.removeChild(container.lastElementChild);
+            }
+        //Loop through the JSON array
         dataArray.forEach(function(data) {
             // Create a container for each object
             var objectContainer = document.createElement('div');

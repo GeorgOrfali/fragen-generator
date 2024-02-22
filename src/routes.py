@@ -8,6 +8,7 @@ import wn
 from generator import SingleChoice
 from HanTa import HanoverTagger as ht
 from jackxml import JACKXML
+import json
 
 # Set Up the webserver
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -33,7 +34,9 @@ def false():
         tfq.generate_false_question(sentence)
         questions.append(tfq.get_question())
 
-    return questions
+    q = json.dumps(questions)
+    response = Response(q, mimetype='application/json')
+    return response
 
 @app.route("/fill")
 def fill_in_the_blanc():
@@ -88,7 +91,12 @@ def upload_file():
 
     file.save('uploads/' + file.filename)
     print("File Name of PDF: " + file.filename)
-    return generate('uploads/' + file.filename, request.values), 200
+    print("AUFGABEN")
+    aufgaben = json.dumps(generate('uploads/' + file.filename, request.values))
+    response = Response(aufgaben, mimetype='application/json')
+    response.headers["Cache-Control"] = "public, max-age=0"
+    response.status = 200
+    return response
 
 @app.route('/xml', methods=['POST'])
 def generate_xml():
